@@ -16,6 +16,7 @@ import { ConfiguracionComponent } from './views/configuracion/configuracion.comp
 import { CustodiaComponent } from './views/custodia/custodia.component';
 import { InversionComponent } from './views/inversion/inversion.component';
 import { OrdenesComponent } from './views/ordenes/ordenes.component';
+import { ClientesComponent } from './views/configuracion/clientes/clientes.component';
 
 
 @NgModule({
@@ -35,7 +36,8 @@ import { OrdenesComponent } from './views/ordenes/ordenes.component';
     ConfiguracionComponent,
     CustodiaComponent,
     InversionComponent,
-    OrdenesComponent
+    OrdenesComponent,
+    ClientesComponent
   ],
   providers: [],
   bootstrap: [AppComponent]

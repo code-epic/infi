@@ -5,11 +5,13 @@ import { ConfiguracionComponent } from 'src/app/views/configuracion/configuracio
 import { CustodiaComponent } from 'src/app/views/custodia/custodia.component';
 import { InversionComponent } from 'src/app/views/inversion/inversion.component';
 import { OrdenesComponent } from 'src/app/views/ordenes/ordenes.component';
+import { ClientesComponent } from 'src/app/views/configuracion/clientes/clientes.component';
 
 export const AdminLayoutRoutes: Routes = [
     { path: 'dashboard',      component: DashboardComponent },
     { path: 'configuracion',   component: ConfiguracionComponent },
     { path: 'custodia',         component: CustodiaComponent },
     { path: 'inversion',          component: InversionComponent },
-    { path: 'ordenes',          component: OrdenesComponent }
+    { path: 'ordenes',          component: OrdenesComponent },
+    { path: 'clientes',          component: ClientesComponent }
 ];
