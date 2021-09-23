@@ -22,7 +22,7 @@
                 <div class="form-row">
                   <div class="form-group col-md-6">
                     <label for="inputEmail4">Tipo Cliente</label>                    
-                    <select name="" id="" class="form-control">
+                    <select name="" id="tipoCliente" (change)="tipoCliente($event.target.value)" class="form-control">
                             <option value="">Seleccione</option>
                             <option value="P">Persona</option>
                             <option value="E">Empresa</option>
@@ -42,7 +42,7 @@
                                 <OPtion> seleccione</OPtion>
                             </select>
                         </div>
-                        <input type="text" class="form-control" placeholder="" aria-label="" aria-describedby="basic-addon1">
+                        <input type="text" class="form-control inputModifica" placeholder="" aria-label="" aria-describedby="basic-addon1">
                       </div>
                    </div>
 
