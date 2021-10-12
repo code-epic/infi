@@ -17,6 +17,9 @@ import { CustodiaComponent } from './views/custodia/custodia.component';
 import { InversionComponent } from './views/inversion/inversion.component';
 import { OrdenesComponent } from './views/ordenes/ordenes.component';
 import { ClientesComponent } from './views/configuracion/clientes/clientes.component';
+import { TasaComponent } from './views/configuracion/tasa/tasa.component';
+
+
 
 
 @NgModule({
@@ -28,6 +31,7 @@ import { ClientesComponent } from './views/configuracion/clientes/clientes.compo
     NgbModule,
     RouterModule,
     AppRoutingModule
+
   ],
   declarations: [
     AppComponent,
@@ -37,7 +41,8 @@ import { ClientesComponent } from './views/configuracion/clientes/clientes.compo
     CustodiaComponent,
     InversionComponent,
     OrdenesComponent,
-    ClientesComponent
+    ClientesComponent,
+    TasaComponent
   ],
   providers: [],
   bootstrap: [AppComponent]
