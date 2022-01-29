@@ -18,6 +18,7 @@ import { InversionComponent } from './views/inversion/inversion.component';
 import { OrdenesComponent } from './views/ordenes/ordenes.component';
 import { ClientesComponent } from './views/configuracion/clientes/clientes.component';
 import { TasaComponent } from './views/configuracion/tasa/tasa.component';
+import { PortafolioComponent } from './views/configuracion/portafolio/portafolio.component';
 
 
 
@@ -42,7 +43,8 @@ import { TasaComponent } from './views/configuracion/tasa/tasa.component';
     InversionComponent,
     OrdenesComponent,
     ClientesComponent,
-    TasaComponent
+    TasaComponent,
+    PortafolioComponent,
   ],
   providers: [],
   bootstrap: [AppComponent]
