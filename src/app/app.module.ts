@@ -19,6 +19,8 @@ import { OrdenesComponent } from './views/ordenes/ordenes.component';
 import { ClientesComponent } from './views/configuracion/clientes/clientes.component';
 import { TasaComponent } from './views/configuracion/tasa/tasa.component';
 import { PortafolioComponent } from './views/configuracion/portafolio/portafolio.component';
+import { ParametrosComponent } from './views/configuracion/parametros/parametros.component';
+import { BlottersComponent } from './views/configuracion/blotters/blotters.component';
 
 
 
@@ -45,6 +47,8 @@ import { PortafolioComponent } from './views/configuracion/portafolio/portafolio
     ClientesComponent,
     TasaComponent,
     PortafolioComponent,
+    ParametrosComponent,
+    BlottersComponent,
   ],
   providers: [],
   bootstrap: [AppComponent]

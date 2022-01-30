@@ -8,6 +8,8 @@ import { OrdenesComponent } from 'src/app/views/ordenes/ordenes.component';
 import { ClientesComponent } from 'src/app/views/configuracion/clientes/clientes.component';
 import { TasaComponent } from 'src/app/views/configuracion/tasa/tasa.component';
 import { PortafolioComponent } from 'src/app/views/configuracion/portafolio/portafolio.component';
+import { ParametrosComponent } from 'src/app/views/configuracion/parametros/parametros.component';
+import { BlottersComponent } from 'src/app/views/configuracion/blotters/blotters.component';
 
 export const AdminLayoutRoutes: Routes = [
     { path: 'dashboard',      component: DashboardComponent },
@@ -17,5 +19,7 @@ export const AdminLayoutRoutes: Routes = [
     { path: 'ordenes',          component: OrdenesComponent },
     { path: 'clientes',          component: ClientesComponent },
     { path: 'tasa',          component: TasaComponent },
-    { path: 'portafolio',          component: PortafolioComponent }
+    { path: 'portafolio',          component: PortafolioComponent },
+    { path: 'parametros', component: ParametrosComponent },
+    { path: 'blotters', component: BlottersComponent}
 ];

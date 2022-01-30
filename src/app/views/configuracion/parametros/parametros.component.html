@@ -1,0 +1,104 @@
+<div class="header bg-gradient-success pb-8 pt-5 pt-md-8">
+    <div class="container-fluid">
+        <p></p>
+    </div>    
+</div>
+
+<div class="container-fluid mt--7">
+    <div class="row">
+      <div class="col-xl-12 col-md-12 col-lg-12">
+        <div class="card shadow">
+          <div class="card-header bg-transparent">
+            <div class="row align-items-center">
+              <div class="col">
+                <h6 class="text-uppercase text-muted ls-1 mb-1">Grupo Parámetros</h6>
+                <h2 class="mb-0">Criterios</h2>
+              </div>
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="row">
+                <div class="col-md-3">
+                    <label for="criterio">Nombre Parámetro</label>
+                </div>
+                <div class="col-md-6">
+                    <select class="form-control" name="" id="">
+                        <option value="">Seleccione...</option>
+                    </select>
+                </div>
+
+                <div class="col-md-3">
+                    <button type="button" class="btn btn-success">Buscar <i class="fa fa-search" aria-hidden="true"></i> </button>
+                </div>                
+            </div>
+
+            <div class="row top5">
+                <div class="col-md-12">
+                    <table class="table table-striped">
+                        <thead>
+                        <tr>
+                          <th scope="col">Nombre del Grupo</th>
+                          <th scope="col">Nombre del Parámetro</th>
+                          <th scope="col">Descripción del Parámetro</th>
+                          <th scope="col">Valor del Parámetro</th>
+                          <th scope="col">Acción</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                          <td>INTERFAZ DE CONTABILIDAD</td>
+                          <td>NOMBRE-ARCHIVO</td>
+                          <td>NOMBRE DEL ARCHIVO A PROCESAR</td>
+                          <td>contabilidad.txt</td>
+                          <td><i class="fas fa-edit iconEdit" (click)="open(content)"></i></td>
+                        </tr>
+                        </tbody>
+                      </table>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>    
+  </div>
+
+  
+
+  <ng-template #content let-c="close" let-d="dismiss">
+    <div class="modal-header headerModal">
+      <h4 class="modal-title tituloModal" id="modal-basic-title">Editar Grupo de Parámetros</h4>
+      <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+        <div class="row">
+            <div class="col-md-6">
+                <label for="nombreModal"><strong>Nombre del Parámetro</strong></label>
+            </div>
+            <div class="col-md-6">
+              <label> NOMBRE-ARCHIVO</label>             
+            </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <label for="nombreModal"><strong>Descripción del Parámetro</strong></label>
+          </div>
+          <div class="col-md-6">
+            <label> NOMBRE DEL ARCHIVO A PROCESAR</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <label for="nombreModal"><strong>Valor del Parámetro</strong></label>
+          </div>
+          <div class="col-md-6">
+              <input type="text" class="form-control" name="" id="" value="contabilidad.txt">
+          </div>
+        </div>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-success" (click)="c('Save click')">Modificar </button>
+      <button type="button" class="btn btn-primary" (click)="d('Cross click')">Cancelar </button>
+    </div>
+  </ng-template>
