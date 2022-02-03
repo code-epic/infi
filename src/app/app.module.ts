@@ -21,6 +21,9 @@ import { TasaComponent } from './views/configuracion/tasa/tasa.component';
 import { PortafolioComponent } from './views/configuracion/portafolio/portafolio.component';
 import { ParametrosComponent } from './views/configuracion/parametros/parametros.component';
 import { BlottersComponent } from './views/configuracion/blotters/blotters.component';
+import { IndicadoresComponent } from './views/configuracion/indicadores/indicadores.component';
+import { PaisesComponent } from './views/configuracion/paises/paises.component';
+import { OficinasComponent } from './views/configuracion/oficinas/oficinas.component';
 
 
 
@@ -49,6 +52,9 @@ import { BlottersComponent } from './views/configuracion/blotters/blotters.compo
     PortafolioComponent,
     ParametrosComponent,
     BlottersComponent,
+    IndicadoresComponent,
+    PaisesComponent,
+    OficinasComponent,
   ],
   providers: [],
   bootstrap: [AppComponent]

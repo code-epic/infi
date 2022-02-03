@@ -10,6 +10,9 @@ import { TasaComponent } from 'src/app/views/configuracion/tasa/tasa.component';
 import { PortafolioComponent } from 'src/app/views/configuracion/portafolio/portafolio.component';
 import { ParametrosComponent } from 'src/app/views/configuracion/parametros/parametros.component';
 import { BlottersComponent } from 'src/app/views/configuracion/blotters/blotters.component';
+import { IndicadoresComponent} from 'src/app/views/configuracion/indicadores/indicadores.component'
+import { PaisesComponent } from 'src/app/views/configuracion/paises/paises.component';
+import { OficinasComponent } from 'src/app/views/configuracion/oficinas/oficinas.component';
 
 export const AdminLayoutRoutes: Routes = [
     { path: 'dashboard',      component: DashboardComponent },
@@ -21,5 +24,9 @@ export const AdminLayoutRoutes: Routes = [
     { path: 'tasa',          component: TasaComponent },
     { path: 'portafolio',          component: PortafolioComponent },
     { path: 'parametros', component: ParametrosComponent },
-    { path: 'blotters', component: BlottersComponent}
+    { path: 'blotters', component: BlottersComponent},
+    { path: 'indicadores', component:IndicadoresComponent },
+    { path: 'paises', component:PaisesComponent},
+    { path: 'oficinas', component:OficinasComponent}
+
 ];
