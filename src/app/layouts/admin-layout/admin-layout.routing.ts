@@ -13,6 +13,7 @@ import { BlottersComponent } from 'src/app/views/configuracion/blotters/blotters
 import { IndicadoresComponent} from 'src/app/views/configuracion/indicadores/indicadores.component'
 import { PaisesComponent } from 'src/app/views/configuracion/paises/paises.component';
 import { OficinasComponent } from 'src/app/views/configuracion/oficinas/oficinas.component';
+import { InstrumentosFinancierosComponent } from 'src/app/views/configuracion/instrumentos-financieros/instrumentos-financieros.component';
 
 export const AdminLayoutRoutes: Routes = [
     { path: 'dashboard',      component: DashboardComponent },
@@ -27,6 +28,7 @@ export const AdminLayoutRoutes: Routes = [
     { path: 'blotters', component: BlottersComponent},
     { path: 'indicadores', component:IndicadoresComponent },
     { path: 'paises', component:PaisesComponent},
-    { path: 'oficinas', component:OficinasComponent}
+    { path: 'oficinas', component:OficinasComponent},
+    { path: 'instFinancieros', component:InstrumentosFinancierosComponent}
 
 ];
