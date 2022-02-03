@@ -11,6 +11,10 @@ import { PortafolioComponent } from 'src/app/views/configuracion/portafolio/port
 import { ParametrosComponent } from 'src/app/views/configuracion/parametros/parametros.component';
 import { BlottersComponent } from 'src/app/views/configuracion/blotters/blotters.component';
 import { DocumentosComponent } from 'src/app/views/configuracion/documentos/documentos.component';
+import { IndicadoresComponent} from 'src/app/views/configuracion/indicadores/indicadores.component'
+import { PaisesComponent } from 'src/app/views/configuracion/paises/paises.component';
+import { OficinasComponent } from 'src/app/views/configuracion/oficinas/oficinas.component';
+import { InstrumentosFinancierosComponent } from 'src/app/views/configuracion/instrumentos-financieros/instrumentos-financieros.component';
 
 export const AdminLayoutRoutes: Routes = [
     { path: 'dashboard',      component: DashboardComponent },
@@ -23,5 +27,10 @@ export const AdminLayoutRoutes: Routes = [
     { path: 'portafolio',          component: PortafolioComponent },
     { path: 'parametros', component: ParametrosComponent },
     { path: 'blotters', component: BlottersComponent},
-    { path: 'documentos' , component: DocumentosComponent}
+    { path: 'documentos' , component: DocumentosComponent},
+    { path: 'indicadores', component:IndicadoresComponent },
+    { path: 'paises', component:PaisesComponent},
+    { path: 'oficinas', component:OficinasComponent},
+    { path: 'instFinancieros', component:InstrumentosFinancierosComponent}
+
 ];

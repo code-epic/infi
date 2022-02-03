@@ -22,9 +22,10 @@ import { PortafolioComponent } from './views/configuracion/portafolio/portafolio
 import { ParametrosComponent } from './views/configuracion/parametros/parametros.component';
 import { BlottersComponent } from './views/configuracion/blotters/blotters.component';
 import { DocumentosComponent } from './views/configuracion/documentos/documentos.component';
-
-
-
+import { IndicadoresComponent } from './views/configuracion/indicadores/indicadores.component';
+import { PaisesComponent } from './views/configuracion/paises/paises.component';
+import { OficinasComponent } from './views/configuracion/oficinas/oficinas.component';
+import { InstrumentosFinancierosComponent } from './views/configuracion/instrumentos-financieros/instrumentos-financieros.component';
 
 @NgModule({
   imports: [
@@ -51,6 +52,10 @@ import { DocumentosComponent } from './views/configuracion/documentos/documentos
     ParametrosComponent,
     BlottersComponent,
     DocumentosComponent,
+    IndicadoresComponent,
+    PaisesComponent,
+    OficinasComponent,
+    InstrumentosFinancierosComponent
   ],
   providers: [],
   bootstrap: [AppComponent]
