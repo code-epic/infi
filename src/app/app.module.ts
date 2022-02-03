@@ -21,6 +21,7 @@ import { TasaComponent } from './views/configuracion/tasa/tasa.component';
 import { PortafolioComponent } from './views/configuracion/portafolio/portafolio.component';
 import { ParametrosComponent } from './views/configuracion/parametros/parametros.component';
 import { BlottersComponent } from './views/configuracion/blotters/blotters.component';
+import { DocumentosComponent } from './views/configuracion/documentos/documentos.component';
 
 
 
@@ -49,6 +50,7 @@ import { BlottersComponent } from './views/configuracion/blotters/blotters.compo
     PortafolioComponent,
     ParametrosComponent,
     BlottersComponent,
+    DocumentosComponent,
   ],
   providers: [],
   bootstrap: [AppComponent]
