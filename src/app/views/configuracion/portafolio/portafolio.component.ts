@@ -27,7 +27,7 @@ export class PortafolioComponent implements OnInit {
   }
 
   modficar(content){
-    const modalRef = this.modalService.open(content, { size: 'xl', backdrop: 'static' });
+    const modalRef = this.modalService.open(content, { size: 'md', backdrop: 'static' });
   }
 
   toggleMeridian() {

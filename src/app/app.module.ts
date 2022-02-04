@@ -70,7 +70,6 @@ import { UsuariosespecialesComponent } from './views/configuracion/usuariosespec
     IndicadoresComponent,
     PaisesComponent,
     OficinasComponent,
-<<<<<<< HEAD
     InstrumentosFinancierosComponent,
     FechavalorComponent,
     GeneralesComponent,
@@ -78,9 +77,6 @@ import { UsuariosespecialesComponent } from './views/configuracion/usuariosespec
     TitulosComponent,
     TransaccionesfijasComponent,
     UsuariosespecialesComponent,
-=======
-    InstrumentosFinancierosComponent
->>>>>>> 71c52fba17c6ec8906096bb81aeab6d743538b3f
   ],
   providers: [],
   bootstrap: [AppComponent]

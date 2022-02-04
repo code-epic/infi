@@ -22,28 +22,33 @@ import { FechavalorComponent } from 'src/app/views/configuracion/fechavalor/fech
 import { GeneralesComponent } from 'src/app/views/configuracion/generales/generales.component';
 import { RecompraComponent } from 'src/app/views/configuracion/recompra/recompra.component';
 import { TitulosComponent } from 'src/app/views/configuracion/titulos/titulos.component';
+import { TransaccionesfijasComponent } from 'src/app/views/configuracion/transaccionesfijas/transaccionesfijas.component';
+import { UsuariosespecialesComponent } from 'src/app/views/configuracion/usuariosespeciales/usuariosespeciales.component';
+
 
 export const AdminLayoutRoutes: Routes = [
-    { path: 'dashboard',      component: DashboardComponent },
-    { path: 'configuracion',   component: ConfiguracionComponent },
-    { path: 'custodia',         component: CustodiaComponent },
-    { path: 'inversion',          component: InversionComponent },
-    { path: 'ordenes',          component: OrdenesComponent },
-    { path: 'clientes',          component: ClientesComponent },
-    { path: 'tasa',          component: TasaComponent },
-    { path: 'portafolio',          component: PortafolioComponent },
+    { path: 'dashboard', component: DashboardComponent },
+    { path: 'configuracion', component: ConfiguracionComponent },
+    { path: 'custodia', component: CustodiaComponent },
+    { path: 'inversion', component: InversionComponent },
+    { path: 'ordenes', component: OrdenesComponent },
+    { path: 'clientes', component: ClientesComponent },
+    { path: 'tasa', component: TasaComponent },
+    { path: 'portafolio', component: PortafolioComponent },
     { path: 'parametros', component: ParametrosComponent },
     { path: 'blotters', component: BlottersComponent},
     { path: 'auditoria', component: AuditoriaComponent},
     { path: 'calendario', component: CalendarioComponent},
     { path: 'beneficiarios', component: BeneficiariosComponent},
     { path: 'dinamicos', component: CamposDinamicosComponent},
-    { path: 'indicadores', component:IndicadoresComponent },
+    { path: 'indicadores', component:IndicadoresComponent},
     { path: 'paises', component:PaisesComponent},
     { path: 'oficinas', component:OficinasComponent},
     { path: 'instFinancieros', component:InstrumentosFinancierosComponent},
-    { path: 'fechavalor',          component: FechavalorComponent },
-    { path: 'generales',          component: GeneralesComponent },
-    { path: 'recompra',          component: RecompraComponent },
-    { path: 'titulos',          component: TitulosComponent }
+    { path: 'fechavalor', component: FechavalorComponent},
+    { path: 'generales', component: GeneralesComponent},
+    { path: 'recompra', component: RecompraComponent},
+    { path: 'titulos', component: TitulosComponent},
+    { path: 'transaccionesfijas', component: TransaccionesfijasComponent},
+    { path: 'usuariosespeciales', component: UsuariosespecialesComponent},
 ];
