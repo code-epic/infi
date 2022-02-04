@@ -21,6 +21,10 @@ import { TasaComponent } from './views/configuracion/tasa/tasa.component';
 import { PortafolioComponent } from './views/configuracion/portafolio/portafolio.component';
 import { ParametrosComponent } from './views/configuracion/parametros/parametros.component';
 import { BlottersComponent } from './views/configuracion/blotters/blotters.component';
+import { AuditoriaComponent } from './views/configuracion/auditoria/auditoria.component';
+import { CalendarioComponent } from './views/configuracion/calendario/calendario.component';
+import { BeneficiariosComponent } from './views/configuracion/beneficiarios/beneficiarios.component';
+import { CamposDinamicosComponent } from './views/configuracion/campos-dinamicos/campos-dinamicos.component';
 
 
 
@@ -49,6 +53,10 @@ import { BlottersComponent } from './views/configuracion/blotters/blotters.compo
     PortafolioComponent,
     ParametrosComponent,
     BlottersComponent,
+    AuditoriaComponent,
+    CalendarioComponent,
+    BeneficiariosComponent,
+    CamposDinamicosComponent,
   ],
   providers: [],
   bootstrap: [AppComponent]

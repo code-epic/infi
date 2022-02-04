@@ -10,6 +10,10 @@ import { TasaComponent } from 'src/app/views/configuracion/tasa/tasa.component';
 import { PortafolioComponent } from 'src/app/views/configuracion/portafolio/portafolio.component';
 import { ParametrosComponent } from 'src/app/views/configuracion/parametros/parametros.component';
 import { BlottersComponent } from 'src/app/views/configuracion/blotters/blotters.component';
+import { AuditoriaComponent } from 'src/app/views/configuracion/auditoria/auditoria.component';
+import { CalendarioComponent } from 'src/app/views/configuracion/calendario/calendario.component';
+import { BeneficiariosComponent } from 'src/app/views/configuracion/beneficiarios/beneficiarios.component';
+import { CamposDinamicosComponent } from 'src/app/views/configuracion/campos-dinamicos/campos-dinamicos.component';
 
 export const AdminLayoutRoutes: Routes = [
     { path: 'dashboard',      component: DashboardComponent },
@@ -21,5 +25,9 @@ export const AdminLayoutRoutes: Routes = [
     { path: 'tasa',          component: TasaComponent },
     { path: 'portafolio',          component: PortafolioComponent },
     { path: 'parametros', component: ParametrosComponent },
-    { path: 'blotters', component: BlottersComponent}
+    { path: 'blotters', component: BlottersComponent},
+    { path: 'auditoria', component: AuditoriaComponent},
+    { path: 'calendario', component: CalendarioComponent},
+    { path: 'beneficiarios', component: BeneficiariosComponent},
+    { path: 'dinamicos', component: CamposDinamicosComponent}
 ];
