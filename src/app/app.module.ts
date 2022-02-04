@@ -22,6 +22,10 @@ import { PortafolioComponent } from './views/configuracion/portafolio/portafolio
 import { ParametrosComponent } from './views/configuracion/parametros/parametros.component';
 import { BlottersComponent } from './views/configuracion/blotters/blotters.component';
 import { DocumentosComponent } from './views/configuracion/documentos/documentos.component';
+import { AuditoriaComponent } from './views/configuracion/auditoria/auditoria.component';
+import { CalendarioComponent } from './views/configuracion/calendario/calendario.component';
+import { BeneficiariosComponent } from './views/configuracion/beneficiarios/beneficiarios.component';
+import { CamposDinamicosComponent } from './views/configuracion/campos-dinamicos/campos-dinamicos.component';
 import { IndicadoresComponent } from './views/configuracion/indicadores/indicadores.component';
 import { PaisesComponent } from './views/configuracion/paises/paises.component';
 import { OficinasComponent } from './views/configuracion/oficinas/oficinas.component';
@@ -52,6 +56,10 @@ import { InstrumentosFinancierosComponent } from './views/configuracion/instrume
     ParametrosComponent,
     BlottersComponent,
     DocumentosComponent,
+    AuditoriaComponent,
+    CalendarioComponent,
+    BeneficiariosComponent,
+    CamposDinamicosComponent,
     IndicadoresComponent,
     PaisesComponent,
     OficinasComponent,
