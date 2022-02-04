@@ -21,6 +21,7 @@ import { TasaComponent } from './views/configuracion/tasa/tasa.component';
 import { PortafolioComponent } from './views/configuracion/portafolio/portafolio.component';
 import { ParametrosComponent } from './views/configuracion/parametros/parametros.component';
 import { BlottersComponent } from './views/configuracion/blotters/blotters.component';
+import { DocumentosComponent } from './views/configuracion/documentos/documentos.component';
 import { AuditoriaComponent } from './views/configuracion/auditoria/auditoria.component';
 import { CalendarioComponent } from './views/configuracion/calendario/calendario.component';
 import { BeneficiariosComponent } from './views/configuracion/beneficiarios/beneficiarios.component';
@@ -35,9 +36,6 @@ import { RecompraComponent } from './views/configuracion/recompra/recompra.compo
 import { TitulosComponent } from './views/configuracion/titulos/titulos.component';
 import { TransaccionesfijasComponent } from './views/configuracion/transaccionesfijas/transaccionesfijas.component';
 import { UsuariosespecialesComponent } from './views/configuracion/usuariosespeciales/usuariosespeciales.component';
-
-
-
 
 @NgModule({
   imports: [
@@ -63,6 +61,7 @@ import { UsuariosespecialesComponent } from './views/configuracion/usuariosespec
     PortafolioComponent,
     ParametrosComponent,
     BlottersComponent,
+    DocumentosComponent,
     AuditoriaComponent,
     CalendarioComponent,
     BeneficiariosComponent,
@@ -76,7 +75,7 @@ import { UsuariosespecialesComponent } from './views/configuracion/usuariosespec
     RecompraComponent,
     TitulosComponent,
     TransaccionesfijasComponent,
-    UsuariosespecialesComponent,
+    UsuariosespecialesComponent
   ],
   providers: [],
   bootstrap: [AppComponent]

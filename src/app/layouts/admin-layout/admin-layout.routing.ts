@@ -10,6 +10,7 @@ import { TasaComponent } from 'src/app/views/configuracion/tasa/tasa.component';
 import { PortafolioComponent } from 'src/app/views/configuracion/portafolio/portafolio.component';
 import { ParametrosComponent } from 'src/app/views/configuracion/parametros/parametros.component';
 import { BlottersComponent } from 'src/app/views/configuracion/blotters/blotters.component';
+import { DocumentosComponent } from 'src/app/views/configuracion/documentos/documentos.component';
 import { AuditoriaComponent } from 'src/app/views/configuracion/auditoria/auditoria.component';
 import { CalendarioComponent } from 'src/app/views/configuracion/calendario/calendario.component';
 import { BeneficiariosComponent } from 'src/app/views/configuracion/beneficiarios/beneficiarios.component';
@@ -37,6 +38,7 @@ export const AdminLayoutRoutes: Routes = [
     { path: 'portafolio', component: PortafolioComponent },
     { path: 'parametros', component: ParametrosComponent },
     { path: 'blotters', component: BlottersComponent},
+    { path: 'documentos' , component: DocumentosComponent},
     { path: 'auditoria', component: AuditoriaComponent},
     { path: 'calendario', component: CalendarioComponent},
     { path: 'beneficiarios', component: BeneficiariosComponent},
@@ -50,5 +52,5 @@ export const AdminLayoutRoutes: Routes = [
     { path: 'recompra', component: RecompraComponent},
     { path: 'titulos', component: TitulosComponent},
     { path: 'transaccionesfijas', component: TransaccionesfijasComponent},
-    { path: 'usuariosespeciales', component: UsuariosespecialesComponent},
+    { path: 'usuariosespeciales', component: UsuariosespecialesComponent}
 ];

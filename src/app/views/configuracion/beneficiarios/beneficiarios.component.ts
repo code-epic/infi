@@ -28,7 +28,7 @@ export class BeneficiariosComponent implements OnInit {
   }
 
   add(content) {
-    this.modalService.open(content);
+    this.modalService.open(content,{ size: 'xl', backdrop: 'static' });
     
   }
 
