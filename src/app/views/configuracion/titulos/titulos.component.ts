@@ -2,14 +2,14 @@ import { Component, OnInit } from '@angular/core';
 import { NgbModalConfig, NgbModal } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
-  selector: 'app-portafolio',
-  templateUrl: './portafolio.component.html',
-  styleUrls: ['./portafolio.component.scss']
+  selector: 'app-titulos',
+  templateUrl: './titulos.component.html',
+  styleUrls: ['./titulos.component.scss']
 })
-export class PortafolioComponent implements OnInit {
-
+export class TitulosComponent implements OnInit {
   time = {hour: 13, minute: 30};
   meridian = true;
+
 
   constructor(config: NgbModalConfig, private modalService: NgbModal) {
     // customize default values of modals used by this component tree
@@ -27,7 +27,7 @@ export class PortafolioComponent implements OnInit {
   }
 
   modficar(content){
-    const modalRef = this.modalService.open(content, { size: 'xl', backdrop: 'static' });
+    const modalRef = this.modalService.open(content, { size: 'md', backdrop: 'static' });
   }
 
   toggleMeridian() {

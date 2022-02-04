@@ -14,6 +14,10 @@ import { IndicadoresComponent} from 'src/app/views/configuracion/indicadores/ind
 import { PaisesComponent } from 'src/app/views/configuracion/paises/paises.component';
 import { OficinasComponent } from 'src/app/views/configuracion/oficinas/oficinas.component';
 import { InstrumentosFinancierosComponent } from 'src/app/views/configuracion/instrumentos-financieros/instrumentos-financieros.component';
+import { FechavalorComponent } from 'src/app/views/configuracion/fechavalor/fechavalor.component';
+import { GeneralesComponent } from 'src/app/views/configuracion/generales/generales.component';
+import { RecompraComponent } from 'src/app/views/configuracion/recompra/recompra.component';
+import { TitulosComponent } from 'src/app/views/configuracion/titulos/titulos.component';
 
 export const AdminLayoutRoutes: Routes = [
     { path: 'dashboard',      component: DashboardComponent },
@@ -29,6 +33,9 @@ export const AdminLayoutRoutes: Routes = [
     { path: 'indicadores', component:IndicadoresComponent },
     { path: 'paises', component:PaisesComponent},
     { path: 'oficinas', component:OficinasComponent},
-    { path: 'instFinancieros', component:InstrumentosFinancierosComponent}
-
+    { path: 'instFinancieros', component:InstrumentosFinancierosComponent},
+    { path: 'fechavalor',          component: FechavalorComponent },
+    { path: 'generales',          component: GeneralesComponent },
+    { path: 'recompra',          component: RecompraComponent },
+    { path: 'titulos',          component: TitulosComponent }
 ];

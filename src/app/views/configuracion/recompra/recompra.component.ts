@@ -2,12 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { NgbModalConfig, NgbModal } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
-  selector: 'app-portafolio',
-  templateUrl: './portafolio.component.html',
-  styleUrls: ['./portafolio.component.scss']
+  selector: 'app-recompra',
+  templateUrl: './recompra.component.html',
+  styleUrls: ['./recompra.component.scss']
 })
-export class PortafolioComponent implements OnInit {
-
+export class RecompraComponent implements OnInit {
   time = {hour: 13, minute: 30};
   meridian = true;
 

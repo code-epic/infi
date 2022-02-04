@@ -25,6 +25,12 @@ import { IndicadoresComponent } from './views/configuracion/indicadores/indicado
 import { PaisesComponent } from './views/configuracion/paises/paises.component';
 import { OficinasComponent } from './views/configuracion/oficinas/oficinas.component';
 import { InstrumentosFinancierosComponent } from './views/configuracion/instrumentos-financieros/instrumentos-financieros.component';
+import { FechavalorComponent } from './views/configuracion/fechavalor/fechavalor.component';
+import { GeneralesComponent } from './views/configuracion/generales/generales.component';
+import { RecompraComponent } from './views/configuracion/recompra/recompra.component';
+import { TitulosComponent } from './views/configuracion/titulos/titulos.component';
+import { TransaccionesfijasComponent } from './views/configuracion/transaccionesfijas/transaccionesfijas.component';
+import { UsuariosespecialesComponent } from './views/configuracion/usuariosespeciales/usuariosespeciales.component';
 
 
 
@@ -57,6 +63,12 @@ import { InstrumentosFinancierosComponent } from './views/configuracion/instrume
     PaisesComponent,
     OficinasComponent,
     InstrumentosFinancierosComponent,
+    FechavalorComponent,
+    GeneralesComponent,
+    RecompraComponent,
+    TitulosComponent,
+    TransaccionesfijasComponent,
+    UsuariosespecialesComponent,
   ],
   providers: [],
   bootstrap: [AppComponent]
