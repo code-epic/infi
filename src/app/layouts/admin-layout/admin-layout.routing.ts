@@ -14,6 +14,10 @@ import { AuditoriaComponent } from 'src/app/views/configuracion/auditoria/audito
 import { CalendarioComponent } from 'src/app/views/configuracion/calendario/calendario.component';
 import { BeneficiariosComponent } from 'src/app/views/configuracion/beneficiarios/beneficiarios.component';
 import { CamposDinamicosComponent } from 'src/app/views/configuracion/campos-dinamicos/campos-dinamicos.component';
+import { IndicadoresComponent} from 'src/app/views/configuracion/indicadores/indicadores.component'
+import { PaisesComponent } from 'src/app/views/configuracion/paises/paises.component';
+import { OficinasComponent } from 'src/app/views/configuracion/oficinas/oficinas.component';
+import { InstrumentosFinancierosComponent } from 'src/app/views/configuracion/instrumentos-financieros/instrumentos-financieros.component';
 
 export const AdminLayoutRoutes: Routes = [
     { path: 'dashboard',      component: DashboardComponent },
@@ -29,5 +33,9 @@ export const AdminLayoutRoutes: Routes = [
     { path: 'auditoria', component: AuditoriaComponent},
     { path: 'calendario', component: CalendarioComponent},
     { path: 'beneficiarios', component: BeneficiariosComponent},
-    { path: 'dinamicos', component: CamposDinamicosComponent}
+    { path: 'dinamicos', component: CamposDinamicosComponent},
+    { path: 'indicadores', component:IndicadoresComponent },
+    { path: 'paises', component:PaisesComponent},
+    { path: 'oficinas', component:OficinasComponent},
+    { path: 'instFinancieros', component:InstrumentosFinancierosComponent}
 ];

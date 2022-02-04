@@ -25,6 +25,10 @@ import { AuditoriaComponent } from './views/configuracion/auditoria/auditoria.co
 import { CalendarioComponent } from './views/configuracion/calendario/calendario.component';
 import { BeneficiariosComponent } from './views/configuracion/beneficiarios/beneficiarios.component';
 import { CamposDinamicosComponent } from './views/configuracion/campos-dinamicos/campos-dinamicos.component';
+import { IndicadoresComponent } from './views/configuracion/indicadores/indicadores.component';
+import { PaisesComponent } from './views/configuracion/paises/paises.component';
+import { OficinasComponent } from './views/configuracion/oficinas/oficinas.component';
+import { InstrumentosFinancierosComponent } from './views/configuracion/instrumentos-financieros/instrumentos-financieros.component';
 
 
 
@@ -57,6 +61,10 @@ import { CamposDinamicosComponent } from './views/configuracion/campos-dinamicos
     CalendarioComponent,
     BeneficiariosComponent,
     CamposDinamicosComponent,
+    IndicadoresComponent,
+    PaisesComponent,
+    OficinasComponent,
+    InstrumentosFinancierosComponent
   ],
   providers: [],
   bootstrap: [AppComponent]
