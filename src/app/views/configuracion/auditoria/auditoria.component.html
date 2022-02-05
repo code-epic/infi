@@ -51,27 +51,29 @@
                     </form>
                     <div class="row top5">
                         <div class="col-md-12">
-                            <table class="table table-striped responsive">
-                                <thead>
-                                    <tr>
-                                        <th scope="col">Url</th>
-                                        <th scope="col">Auditable</th>
-                                        <th scope="col">Parametros</th>
-                                        <th scope="col">Acción</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>/prueba</td>
-                                        <td>SI</td>
-                                        <td>Parametro</td>
-                                        <td>
-                                            <i class="fas fa-edit iconEdit" (click)="modficar(content)"></i>
-                                            <i class="far fa-trash-alt iconElimi" (click)="open(eliminar)"></i>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                            <div class="table-responsive">
+                                <table class="table table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">Url</th>
+                                            <th scope="col">Auditable</th>
+                                            <th scope="col">Parametros</th>
+                                            <th scope="col">Acción</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>/prueba</td>
+                                            <td>SI</td>
+                                            <td>Parametro</td>
+                                            <td>
+                                                <i class="fas fa-edit iconEdit" (click)="modficar(content)"></i>
+                                                <i class="far fa-trash-alt iconElimi" (click)="open(eliminar)"></i>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
                     </div>
                 </div>
