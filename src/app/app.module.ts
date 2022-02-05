@@ -29,6 +29,7 @@ import { IndicadoresComponent } from './views/configuracion/indicadores/indicado
 import { PaisesComponent } from './views/configuracion/paises/paises.component';
 import { OficinasComponent } from './views/configuracion/oficinas/oficinas.component';
 import { InstrumentosFinancierosComponent } from './views/configuracion/instrumentos-financieros/instrumentos-financieros.component';
+import { OficinaDetallesComponent } from './views/configuracion/oficina-detalles/oficina-detalles.component';
 
 
 
@@ -64,7 +65,8 @@ import { InstrumentosFinancierosComponent } from './views/configuracion/instrume
     IndicadoresComponent,
     PaisesComponent,
     OficinasComponent,
-    InstrumentosFinancierosComponent
+    InstrumentosFinancierosComponent,
+    OficinaDetallesComponent
   ],
   providers: [],
   bootstrap: [AppComponent]

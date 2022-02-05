@@ -18,6 +18,7 @@ import { IndicadoresComponent} from 'src/app/views/configuracion/indicadores/ind
 import { PaisesComponent } from 'src/app/views/configuracion/paises/paises.component';
 import { OficinasComponent } from 'src/app/views/configuracion/oficinas/oficinas.component';
 import { InstrumentosFinancierosComponent } from 'src/app/views/configuracion/instrumentos-financieros/instrumentos-financieros.component';
+import { OficinaDetallesComponent } from 'src/app/views/configuracion/oficina-detalles/oficina-detalles.component';
 
 export const AdminLayoutRoutes: Routes = [
     { path: 'dashboard',      component: DashboardComponent },
@@ -37,5 +38,6 @@ export const AdminLayoutRoutes: Routes = [
     { path: 'indicadores', component:IndicadoresComponent },
     { path: 'paises', component:PaisesComponent},
     { path: 'oficinas', component:OficinasComponent},
-    { path: 'instFinancieros', component:InstrumentosFinancierosComponent}
+    { path: 'instFinancieros', component:InstrumentosFinancierosComponent},
+    { path: 'ofidetalle', component:OficinaDetallesComponent}
 ];

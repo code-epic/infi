@@ -19,14 +19,19 @@
                 <div class="card-body">
                     <!-- Chart -->
                     <form>
-                        <div class="form-row">
-                            <div class="form-group col-md-6">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div>
+                                    <button type="submit" class="btn btn-success" (click)="add(agregar)">Agregar <i class="fas fa-check-double"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row top5">
+                            <div class="form-group col-md-4">
                                 <label for="url">Url</label>
                                 <input type="text" class="form-control" id="nombre" placeholder="Accion" value="/">
                             </div>
-                        </div>
-                        <div class="form-row">
-                            <div class="form-group col-md-6">
+                            <div class="form-group col-md-2">
                                 <label for="inputEmail4">Tipo Cliente</label>
                                 <select name="" id="tipoAuditoria" class="form-control">
                                     <option value="">Todos</option>
@@ -34,23 +39,19 @@
                                     <option value="E">2</option>
                                 </select>
                             </div>
+                            <div class="col-md-2 top5">
 
-                        </div>
+                                <button type="submit" class="btn btn-success">Buscar <i class="fas fa-check-double"></i></button>
 
-
-                        <div class="row">
-                            <div class="col-md-12">
-                                <div class="text-center">
-                                    <button type="submit" class="btn btn-success">Procesar <i class="fas fa-check-double"></i></button>
-                                    <button type="submit" class="btn btn-success" (click)="add(agregar)">Agregar <i class="fas fa-check-double"></i></button>
-                                    <button type="submit" class="btn btn-primary">Salir <i class="far fa-trash-alt"></i></button>
-                                </div>
                             </div>
                         </div>
+
+
+
                     </form>
                     <div class="row top5">
                         <div class="col-md-12">
-                            <table class="table table-striped">
+                            <table class="table table-striped responsive">
                                 <thead>
                                     <tr>
                                         <th scope="col">Url</th>
@@ -91,7 +92,7 @@
     <div class="modal-body">
 
         <div class="row">
-            <div class="col-md-4">
+            <div class="col-md-12">
                 <label for="">Url</label>
                 <input type="text" class="form-control" value="/">
             </div>
@@ -140,7 +141,7 @@
     <div class="modal-body">
 
         <div class="row">
-            <div class="col-md-4">
+            <div class="col-md-12">
                 <label for="">Url</label>
                 <input type="text" class="form-control" value="/">
             </div>
