@@ -28,7 +28,7 @@ export class AuditoriaComponent implements OnInit {
   }
 
   add(content) {
-    this.modalService.open(content,{ size: 'xl', backdrop: 'static' });
+    this.modalService.open(content);
   }
 
 

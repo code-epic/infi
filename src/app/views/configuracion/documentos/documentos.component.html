@@ -19,50 +19,49 @@
         <div class="card-body">
           <!-- Chart -->
           <form>
+            <div class="row mb-4">
+              <div class="col-md-12 text-left">
+                <button type="button" class="btn bg-gradient-red text-white" (click)="add(agregar)">+ Agregar + <i aria-hidden="true"></i> </button>
+              </div> 
+            </div>
               <div class="form-row">
-                <div class="form-group col-md-6">
-                  <label for="inputEmail4">Unidad de inversion</label>                    
+                <div class="form-group col-md-6">                  
                   <select name="" id="tipoDocumentos" (change)="tipoDocumentos($event.target.value)" class="form-control">
-                          <option value="">Seleccione</option>
+                          <option value="">Unidad de inversion</option>
                   </select>
                 </div>
-                <div class="form-group col-md-6">
-                  <label for="inputEmail4">Transaccion</label>                    
+                <div class="form-group col-md-6">             
                   <select name="" id="tipoDocumentos" (change)="tipoDocumentos($event.target.value)" class="form-control">
-                          <option value="">Seleccione</option>
+                          <option value="">Transaccion</option>
                   </select>
                 </div>
               </div>
               <div class="form-row">
-                <div class="form-group col-md-6">
-                  <label for="inputEmail4">Estatus</label>                    
+                <div class="form-group col-md-6">               
                   <select name="" id="tipoDocumentos" (change)="tipoDocumentos($event.target.value)" class="form-control">
-                          <option value="">TODOS</option>
+                          <option value="">Estatus</option>
                           <option value="P">APROBADO</option>
                           <option value="E">REGISTRADO</option>
                   </select>
                 </div>
-                <div class="form-group col-md-5">                   
-                  <label for="numTelefono">Creado por :</label>
-                  <input type="text" id="numTelefono" class="form-control" >                
-              </div>
-              <div class="form-group col-md-1 topIconBusqueda">                   
-                <i class="fas fa-search" ></i>                  
-            </div>
+                <div class="form-group col-md-6">               
+                  <select name="" id="tipoDocumentos" (change)="tipoDocumentos($event.target.value)" class="form-control">
+                          <option value="">Creado por</option>
+                          <option value="P">Angel</option>
+                          <option value="E">Jesus</option>
+                  </select>
+                </div>
               </div>
 
                <div class="form-row">
-
                 <div class="form-group col-md-4">                   
-                  <label for="numTelefono">Fecha creacion desde :</label>
-                  <input type="text" ngbDatepicker #d="ngbDatepicker" class="form-control" >                  
+                  <input type="text" ngbDatepicker #d="ngbDatepicker" class="form-control" placeholder="Fecha creacion desde">                  
               </div>
               <div class="form-group col-md-2 topIconCalendario" >  
                 <i class="far fa-calendar-alt " (click)="d.toggle()"></i>
               </div>
               <div class="form-group col-md-4">                   
-                <label for="numTelefono">Fecha creacion hasta :</label>
-                <input type="text" ngbDatepicker #c="ngbDatepicker" class="form-control" >                  
+                <input type="text" ngbDatepicker #c="ngbDatepicker" class="form-control" placeholder="Fecha creacion hasta">                  
             </div>
             <div class="form-group col-md-2 topIconCalendario" >  
               <i class="far fa-calendar-alt " (click)="c.toggle()"></i>
@@ -72,36 +71,31 @@
                <div class="form-row">
 
                 <div class="form-group col-md-4">                   
-                    <label for="numTelefono">Fecha aprovacion desde :</label>
-                    <input type="text" ngbDatepicker #a="ngbDatepicker" class="form-control" >                  
+                    <input type="text" ngbDatepicker #a="ngbDatepicker" class="form-control" placeholder="Fecha aprovacion desde">                  
                 </div>
                 <div class="form-group col-md-2 topIconCalendario" >  
                   <i class="far fa-calendar-alt " (click)="a.toggle()"></i>
                 </div>
                 <div class="form-group col-md-4">                   
-                  <label for="numTelefono">Fecha aprovacion hasta :</label>
-                  <input type="text" ngbDatepicker #b="ngbDatepicker" class="form-control" >                  
+                  <input type="text" ngbDatepicker #b="ngbDatepicker" class="form-control" placeholder="Fecha aprovacion hasta">                  
               </div>
               <div class="form-group col-md-2 topIconCalendario" >  
                 <i class="far fa-calendar-alt " (click)="b.toggle()"></i>
               </div>
                </div>
                <div class="form-row">
-
-                <div class="form-group col-md-5">                   
-                    <label for="numTelefono">Aprovado por :</label>
-                    <input type="text" id="numTelefono" class="form-control" >                    
+                <div class="form-group col-md-6">               
+                  <select name="" id="tipoDocumentos" (change)="tipoDocumentos($event.target.value)" class="form-control">
+                          <option value="">Aprobado por</option>
+                          <option value="P">Antonio</option>
+                          <option value="E">Gustavo</option>
+                  </select>
                 </div>
-                <div class="form-group col-md-1 topIconBusqueda">                   
-                  <i class="fas fa-search" ></i>                  
-              </div>
                </div> 
               <div class="row">                   
                   <div class="col-md-12">
                       <div class="text-center">
-                          <button type="submit" class="btn btn-success" (click)="modficar(content)">Procesar <i class="fas fa-check-double"></i></button>
-                          <button type="submit" class="btn btn-success" (click)="add(agregar)">Agregar <i class="fas fa-check-double"></i></button>
-                          <button type="submit" class="btn btn-primary">Salir <i class="far fa-trash-alt"></i></button>
+                          <button type="submit" class="btn bg-gradient-red text-white">Buscar<i aria-hidden="true"></i></button>
                       </div>                           
                   </div>                   
               </div>  
@@ -154,7 +148,7 @@
 </div>
 
 <ng-template #agregar let-c="close" let-d="dismiss">
-  <div class="modal-header headerModal">
+  <div class="modal-header header bg-gradient-red">
     <h4 class="modal-title tituloModal" id="modal-basic-title">Agregar</h4>
     <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
       <span aria-hidden="true">&times;</span>
@@ -175,7 +169,7 @@
           <div class="col-md-4">
             <br><p class="row"></p>
             <div class="form-inline">
-              <label class="custom-file-upload col-md-12 col-sm-12 col-xs-12 col-lg-5  col-xl-5 radio">
+              <label class="custom-file-upload col-md-12 col-sm-12 col-xs-12 col-lg-5  col-xl-5 bg-gradient-red text-white radio">
                 <input type="file" id="anexoInformeRRHH" name="datosSol.anexoInformeRRHH" (change)="document($event.target.value)"/>
                  Examinar <i class="fas fa-file-export"></i>
                 </label>  <input type="text" class="form-control col-md-12 col-sm-12 col-xs-12 col-lg-5  col-xl-6 radio" id="mostrar" placeholder="Seleccione Archivo" value="{{nombre}}"  disabled>
@@ -203,13 +197,13 @@
       
   </div>
   <div class="modal-footer">
-    <button type="button" class="btn btn-success" (click)="c('Save click')">Agregar </button>
-    <button type="button" class="btn btn-primary" (click)="d('Cross click')">Cancelar </button>
+    <button type="button" class="btn bg-gradient-red text-white" (click)="c('Save click')">Agregar </button>
+    <button type="button" class="btn bg-gradient-red text-white" (click)="d('Cross click')">Cancelar </button>
   </div>
 </ng-template>
 
 <ng-template #content let-c="close" let-d="dismiss">
-  <div class="modal-header headerModal">
+  <div class="modal-header bg-gradient-red">
     <h4 class="modal-title tituloModal" id="modal-basic-title">Agregar</h4>
     <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
       <span aria-hidden="true">&times;</span>
@@ -250,14 +244,14 @@
       
   </div>
   <div class="modal-footer">
-    <button type="button" class="btn btn-success" (click)="c('Save click')">Modificar </button>
-    <button type="button" class="btn btn-primary" (click)="d('Cross click')">Cancelar </button>
+    <button type="button" class="btn bg-gradient-red text-white" (click)="c('Save click')">Modificar </button>
+    <button type="button" class="btn bg-gradient-red text-white" (click)="d('Cross click')">Cancelar </button>
   </div>
 </ng-template>
 
 
 <ng-template #eliminar let-c="close" let-d="dismiss">
-  <div class="modal-header headerModalE">
+  <div class="modal-header bg-gradient-red">
     <h4 class="modal-title tituloModal" id="modal-basic-title">Eliminar Registro</h4>
     <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
       <span aria-hidden="true">&times;</span>
@@ -273,7 +267,7 @@
 </ng-template>
 
 <ng-template #observacion let-c="close" let-d="dismiss">
-  <div class="modal-header headerModal">
+  <div class="modal-header bg-gradient-red">
     <h4 class="modal-title tituloModal" id="modal-basic-title">Validacion Documento</h4>
     <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
       <span aria-hidden="true">&times;</span>
@@ -318,8 +312,7 @@
     </div>
   
   <div class="modal-footer">
-    <button type="button" class="btn btn-danger" (click)="c('Save click')">Eliminar </button>
-    <button type="button" class="btn btn-primary" (click)="d('Cross click')">Cancelar </button>
+    <button type="button" class="btn bg-gradient-red text-white" (click)="d('Cross click')">Cancelar </button>
   </div>
 </ng-template>
 

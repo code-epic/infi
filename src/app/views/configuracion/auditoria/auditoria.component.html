@@ -22,26 +22,24 @@
                         <div class="row">
                             <div class="col-md-12">
                                 <div>
-                                    <button type="submit" class="btn btn-success" (click)="add(agregar)">Agregar <i class="fas fa-check-double"></i></button>
+                                    <button type="submit" class="btn bg-gradient-red text-white" (click)="add(agregar)"> + Agregar + <i aria-hidden="true"></i></button>
                                 </div>
                             </div>
                         </div>
                         <div class="form-row top5">
                             <div class="form-group col-md-4">
-                                <label for="url">Url</label>
-                                <input type="text" class="form-control" id="nombre" placeholder="Accion" value="/">
+                                <input type="text" class="form-control" id="nombre" placeholder="URL - Accion">
                             </div>
                             <div class="form-group col-md-2">
-                                <label for="inputEmail4">Tipo Cliente</label>
                                 <select name="" id="tipoAuditoria" class="form-control">
-                                    <option value="">Todos</option>
+                                    <option value="">Tipo Cliente</option>
                                     <option value="P">1</option>
                                     <option value="E">2</option>
                                 </select>
                             </div>
-                            <div class="col-md-2 top5">
+                            <div class="form-group col-md-2">
 
-                                <button type="submit" class="btn btn-success">Buscar <i class="fas fa-check-double"></i></button>
+                                <button type="submit" class="btn bg-gradient-red text-white">Buscar<i aria-hidden="true"></i></button>
 
                             </div>
                         </div>
@@ -85,7 +83,7 @@
 
 
 <ng-template #content let-c="close" let-d="dismiss">
-    <div class="modal-header headerModal">
+    <div class="modal-header bg-gradient-red">
         <h4 class="modal-title tituloModal" id="modal-basic-title">Editar Registro</h4>
         <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
         <span aria-hidden="true">&times;</span>
@@ -134,7 +132,7 @@
 
 
 <ng-template #agregar let-c="close" let-d="dismiss">
-    <div class="modal-header headerModal">
+    <div class="modal-header bg-gradient-red">
         <h4 class="modal-title tituloModal" id="modal-basic-title">Agregar accion</h4>
         <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
         <span aria-hidden="true">&times;</span>
@@ -159,7 +157,7 @@
 
     </div>
     <div class="modal-footer">
-        <button type="button" class="btn btn-success" (click)="c('Save click')">Agregar </button>
-        <button type="button" class="btn btn-primary" (click)="d('Cross click')">Cancelar </button>
+        <button type="button" class="btn bg-gradient-red text-white" (click)="c('Save click')">Agregar </button>
+        <button type="button" class="btn bg-gradient-red text-white" (click)="d('Cross click')">Cancelar </button>
     </div>
 </ng-template>
