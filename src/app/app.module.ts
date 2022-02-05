@@ -36,6 +36,7 @@ import { RecompraComponent } from './views/configuracion/recompra/recompra.compo
 import { TitulosComponent } from './views/configuracion/titulos/titulos.component';
 import { TransaccionesfijasComponent } from './views/configuracion/transaccionesfijas/transaccionesfijas.component';
 import { UsuariosespecialesComponent } from './views/configuracion/usuariosespeciales/usuariosespeciales.component';
+import { OficinasComercialesComponent } from './views/configuracion/oficinas-comerciales/oficinas-comerciales.component';
 
 @NgModule({
   imports: [
@@ -75,7 +76,8 @@ import { UsuariosespecialesComponent } from './views/configuracion/usuariosespec
     RecompraComponent,
     TitulosComponent,
     TransaccionesfijasComponent,
-    UsuariosespecialesComponent
+    UsuariosespecialesComponent,
+    OficinasComercialesComponent
   ],
   providers: [],
   bootstrap: [AppComponent]

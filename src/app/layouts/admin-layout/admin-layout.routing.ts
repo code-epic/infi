@@ -25,6 +25,7 @@ import { RecompraComponent } from 'src/app/views/configuracion/recompra/recompra
 import { TitulosComponent } from 'src/app/views/configuracion/titulos/titulos.component';
 import { TransaccionesfijasComponent } from 'src/app/views/configuracion/transaccionesfijas/transaccionesfijas.component';
 import { UsuariosespecialesComponent } from 'src/app/views/configuracion/usuariosespeciales/usuariosespeciales.component';
+import { OficinasComercialesComponent } from 'src/app/views/configuracion/oficinas-comerciales/oficinas-comerciales.component';
 
 
 export const AdminLayoutRoutes: Routes = [
@@ -52,5 +53,6 @@ export const AdminLayoutRoutes: Routes = [
     { path: 'recompra', component: RecompraComponent},
     { path: 'titulos', component: TitulosComponent},
     { path: 'transaccionesfijas', component: TransaccionesfijasComponent},
-    { path: 'usuariosespeciales', component: UsuariosespecialesComponent}
+    { path: 'usuariosespeciales', component: UsuariosespecialesComponent},
+    { path:'oficinasComerciales', component:OficinasComercialesComponent}
 ];
