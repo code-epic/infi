@@ -19,7 +19,7 @@ export class CalendarioComponent implements OnInit {
   }
 
   add(content) {
-    this.modalService.open(content);
+    this.modalService.open(content,{ size: 'xl', backdrop: 'static' });
     
   }
 

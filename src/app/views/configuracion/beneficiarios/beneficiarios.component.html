@@ -18,28 +18,25 @@
                 </div>
                 <div class="card-body">
                     <!-- Chart -->
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div>
+                                <button type="submit" class="btn btn-success" (click)="add(agregar)">Agregar <i class="fas fa-check-double"></i></button>
+                            </div>
+                        </div>
+                    </div>
                     <form>
-                        <div class="form-row">
-                            <div class="form-group col-md-6">
-                                <label for="url">Nombre de beneficiario</label>
+                        <div class="form-row top">
+                            <div class="form-group col-md-3">
+                                <label for="nombre">Nombre de beneficiario</label>
                                 <input type="text" class="form-control" id="nombre" placeholder="Beneficiario">
                             </div>
-                        </div>
-                        <div class="form-row">
-                            <div class="form-group col-md-6">
-                                <label for="url">Descripcion del benefiario</label>
-                                <input type="text" class="form-control" id="nombre" placeholder="Descripcion">
+                            <div class="form-group col-md-4">
+                                <label for="descripcion">Descripcion del benefiario</label>
+                                <input type="text" class="form-control" id="des" placeholder="Descripcion">
                             </div>
-                        </div>
-
-
-                        <div class="row">
-                            <div class="col-md-12">
-                                <div class="text-center">
-                                    <button type="submit" class="btn btn-success">Procesar <i class="fas fa-check-double"></i></button>
-                                    <button type="submit" class="btn btn-success" (click)="add(agregar)">Agregar <i class="fas fa-check-double"></i></button>
-                                    <button type="submit" class="btn btn-primary">Salir <i class="far fa-trash-alt"></i></button>
-                                </div>
+                            <div class="form-group col-md-2 top">
+                                <button type="submit" class="btn btn-success">Buscar <i class="fas fa-check-double"></i></button>
                             </div>
                         </div>
                     </form>
@@ -84,17 +81,16 @@
     <div class="modal-body">
 
         <div class="row">
-            <div class="col-md-4">
+            <div class="col-md-3">
                 <label for="">Nombre de beneficiario</label>
                 <input type="text" class="form-control">
             </div>
-        </div>
-        <div class="row">
             <div class="col-md-4">
                 <label for="">Descripcion del benefiario</label>
                 <input type="text" class="form-control">
             </div>
         </div>
+
         <div class="row top5">
             <div class="col-md-12">
                 <div class="text-center">
@@ -140,12 +136,10 @@
 
 
         <div class="row">
-            <div class="col-md-4">
+            <div class="col-md-3">
                 <label for="">Nombre de beneficiario</label>
                 <input type="text" class="form-control">
             </div>
-        </div>
-        <div class="row">
             <div class="col-md-4">
                 <label for="">Descripcion del benefiario</label>
                 <input type="text" class="form-control">

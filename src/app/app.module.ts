@@ -21,6 +21,7 @@ import { TasaComponent } from './views/configuracion/tasa/tasa.component';
 import { PortafolioComponent } from './views/configuracion/portafolio/portafolio.component';
 import { ParametrosComponent } from './views/configuracion/parametros/parametros.component';
 import { BlottersComponent } from './views/configuracion/blotters/blotters.component';
+import { DocumentosComponent } from './views/configuracion/documentos/documentos.component';
 import { AuditoriaComponent } from './views/configuracion/auditoria/auditoria.component';
 import { CalendarioComponent } from './views/configuracion/calendario/calendario.component';
 import { BeneficiariosComponent } from './views/configuracion/beneficiarios/beneficiarios.component';
@@ -30,9 +31,13 @@ import { PaisesComponent } from './views/configuracion/paises/paises.component';
 import { OficinasComponent } from './views/configuracion/oficinas/oficinas.component';
 import { InstrumentosFinancierosComponent } from './views/configuracion/instrumentos-financieros/instrumentos-financieros.component';
 import { OficinaDetallesComponent } from './views/configuracion/oficina-detalles/oficina-detalles.component';
-
-
-
+import { FechavalorComponent } from './views/configuracion/fechavalor/fechavalor.component';
+import { GeneralesComponent } from './views/configuracion/generales/generales.component';
+import { RecompraComponent } from './views/configuracion/recompra/recompra.component';
+import { TitulosComponent } from './views/configuracion/titulos/titulos.component';
+import { TransaccionesfijasComponent } from './views/configuracion/transaccionesfijas/transaccionesfijas.component';
+import { UsuariosespecialesComponent } from './views/configuracion/usuariosespeciales/usuariosespeciales.component';
+import { OficinasComercialesComponent } from './views/configuracion/oficinas-comerciales/oficinas-comerciales.component';
 
 @NgModule({
   imports: [
@@ -58,6 +63,7 @@ import { OficinaDetallesComponent } from './views/configuracion/oficina-detalles
     PortafolioComponent,
     ParametrosComponent,
     BlottersComponent,
+    DocumentosComponent,
     AuditoriaComponent,
     CalendarioComponent,
     BeneficiariosComponent,
@@ -66,7 +72,14 @@ import { OficinaDetallesComponent } from './views/configuracion/oficina-detalles
     PaisesComponent,
     OficinasComponent,
     InstrumentosFinancierosComponent,
-    OficinaDetallesComponent
+    OficinaDetallesComponent,
+    FechavalorComponent,
+    GeneralesComponent,
+    RecompraComponent,
+    TitulosComponent,
+    TransaccionesfijasComponent,
+    UsuariosespecialesComponent,
+    OficinasComercialesComponent
   ],
   providers: [],
   bootstrap: [AppComponent]

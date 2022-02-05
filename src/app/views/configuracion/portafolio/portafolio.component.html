@@ -12,111 +12,145 @@
           <div class="row align-items-center">
             <div class="col">
               <h6 class="text-uppercase text-muted ls-1 mb-1">Portafolio</h6>
-              <h2 class="mb-0">Datos Basicos</h2>
+              <h2 class="mb-0">Equivalencia Portafolio</h2>
             </div>
           </div>
         </div>
         <div class="card-body">
-          <!-- Chart -->
-          <form>
-              <div class="form-row">
-                <div class="form-group col-md-6">
-                  <label for="inputEmail4">Tipo Cliente</label>                    
-                  <select name="" id="tipoCliente" class="form-control">
-                          <option value="">Seleccione</option>
-                          <option value="P">Persona</option>
-                          <option value="E">Empresa</option>
-                  </select>
-                </div>
-                <div class="form-group col-md-6">
-                  <label for="nombre">Nombre Cliente</label>
-                  <input type="text" class="form-control" id="nombre" placeholder="Nombre Cliente">
-                </div>
-              </div>
-             <div class="form-row">
-                 <div class="form-group col-md-6">
-                  <label for="inputPassword4">Tipo Identidad</label>
-                  <div class="input-group mb-3">                       
-                      <div class="input-group-prepend">
-                          <select name="" id="" class="form-control">
-                              <OPtion> seleccione</OPtion>
-                          </select>
-                      </div>
-                      <input type="text" class="form-control inputModifica" placeholder="" aria-label="" aria-describedby="basic-addon1">
-                    </div>
-                 </div>
-
-                 <div class="form-group col-md-6">
-                  <label for="numCuenta">Nro Cuenta</label>
-                  <input type="text" class="form-control" id="numCuenta">
-            
+          <div class="row mb-4">
+            <div class="col-md-12 text-left">
+              <button type="button" class="btn bg-gradient-red text-white" (click)="modficar(nuevo)">Nuevo Portafolio + <i aria-hidden="true"></i> </button>
+            </div> 
           </div>
-              
-             </div>
-
-             <div class="form-row">
-
-              <div class="form-group col-md-6">                   
-                  <label for="numTelefono">Nro telefono</label>
-                  <input type="text" id="numTelefono" class="form-control" >                    
-              </div>
-                  <div class="form-group col-md-6">                       
-                      <label for="codigoPostal">Código Postal</label>
-                      <input type="text" id="codigoPostal" class="form-control" >                        
+          <div class="row justify-content-md-center mb-4">
+            <div class="col-md-4">
+              <div class="input-group">
+                <input type="search" class="form-control float-rigth" placeholder="Search" aria-label="Search">
+                <div class="input-group-prepend">
+                  <div class="input-group-text">
+                    <span class="fa fa-search"></span>
                   </div>
-             </div>
-
-              <div class="form-group">
-                <label for="inputAddress2">Dirección o Ubicación</label>
-                <input type="text" class="form-control" id="inputAddress2" placeholder="Direccion, avenida">
-              </div>
-
-
-              <div class="form-row">                
-                <div class="form-group col-md-4">
-                  <label for="razonSocial">Razón Social</label>
-                  <select id="razonSocial" class="form-control">
-                    <option selected>Seleccione</option>
-                    <option>...</option>
-                  </select>
                 </div>
-                <div class="form-group col-md-4">
-                  <label for="estatus">Estatus</label>
-                      <select id="estatus" class="form-control">
-                          <option selected>Seleccione</option>
-                          <option>...</option>
-                      </select>
-                </div>
-                
-
-                <div class="form-group col-md-4">
-                  <label for="correo">Correo</label>
-                  <input type="email" id="correo" class="form-control">
-                </div>
-
+              </div> 
+            </div>
+          </div>
+          <div class="row top">
+              <div class="col-md-12 text-center">
+                  <table class="table table-striped">
+                      <thead>
+                      <tr>
+                        <th scope="col">Código Segmento</th>
+                        <th scope="col">Descripción Segmento</th>
+                        <th scope="col">Portafolio</th>
+                        <th scope="col">Acción</th>
+                      </tr>
+                      </thead>
+                      <tbody>
+                      <tr>
+                        <td>1254</td>
+                        <td>CORPORATIVA</td>
+                        <td>TRAC</td>      
+                        <td>
+                          <i class="fas fa-edit iconEdit" (click)="modficar(content)"></i>
+                          <i class="far fa-trash-alt iconElimi"  (click)="open(eliminar)"></i>                            
+                        </td>
+                      </tr>
+                      </tbody>
+                    </table>
               </div>
-
-              <div class="form-row">
-                  <div class="form-group col-md-12">
-                      <label for="observacion">Observación</label>
-                      <textarea class="form-control" name="" id="observacion" cols="30" rows="10"></textarea>
-                      
-                  </div>
-              </div>
-
-              <div class="row">                   
-                  <div class="col-md-12">
-                      <div class="text-right">
-                          <button type="submit" class="btn btn-success">Guardar <i class="fas fa-check-double"></i></button>
-                          <button type="submit" class="btn btn-primary">Limpiar <i class="far fa-trash-alt"></i></button>
-                      </div>                           
-                  </div>                   
-              </div>                               
-            </form>
+          </div>
         </div>
       </div>
     </div>
   </div>    
 </div>
 
-  
+<ng-template #nuevo let-c="close" let-d="dismiss">
+  <div class="modal-header headerModal">
+    <h4 class="modal-title tituloModal" id="modal-basic-title">Nuevo Segmento</h4>
+    <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+
+      <div class="row">
+          <div class="col-md-4">
+              <label for="">Código</label>
+              <input type="text" class="form-control">
+          </div>
+         
+          <div class="col-md-4">
+              <label for="">Descripción</label>
+              <input type="text" class="form-control">
+          </div>
+          
+
+          <div class="col-md-4">
+              <label for="">Portafolio</label>
+              <select class="form-control" name="" id="">
+                  <option value="">Seleccione</option>
+              </select>
+          </div>
+      </div>
+      
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn bg-gradient-red text-white" (click)="c('Save click')">Modificar </button>
+    <button type="button" class="btn bg-gradient-red text-white" (click)="d('Cross click')">Cancelar </button>
+  </div>
+</ng-template>
+
+
+<ng-template #content let-c="close" let-d="dismiss">
+  <div class="modal-header headerModal">
+    <h4 class="modal-title tituloModal" id="modal-basic-title">Editar Segmento</h4>
+    <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+
+      <div class="row">
+          <div class="col-md-4">
+              <label for="">Código</label>
+              <input type="text" class="form-control">
+          </div>
+         
+          <div class="col-md-4">
+              <label for="">Descripción</label>
+              <input type="text" class="form-control">
+          </div>
+          
+
+          <div class="col-md-4">
+              <label for="">Portafolio</label>
+              <select class="form-control" name="" id="">
+                  <option value="">Seleccione</option>
+              </select>
+          </div>
+      </div>
+      
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn bg-gradient-red text-white" (click)="c('Save click')">Modificar </button>
+    <button type="button" class="btn bg-gradient-red text-white" (click)="d('Cross click')">Cancelar </button>
+  </div>
+</ng-template>
+
+
+<ng-template #eliminar let-c="close" let-d="dismiss">
+  <div class="modal-header headerModalE">
+    <h4 class="modal-title tituloModal" id="modal-basic-title">Eliminar Registro</h4>
+    <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body text-center">
+      <p><strong>¿Está seguro que desea eliminar este segmento? </strong></p>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn bg-gradient-red text-white" (click)="c('Save click')">Eliminar </button>
+    <button type="button" class="btn bg-gradient-red text-white" (click)="d('Cross click')">Cancelar </button>
+  </div>
+</ng-template>
