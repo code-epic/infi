@@ -37,6 +37,7 @@
                                     <option value="E">2</option>
                                 </select>
                             </div>
+                        
                             <div class="form-group col-md-2">
 
                                 <button type="submit" class="btn bg-gradient-red text-white">Buscar<i aria-hidden="true"></i></button>
@@ -48,8 +49,9 @@
 
                     </form>
                     <div class="row top5">
-                        <div class="col-md-12">
+                        <div class="col-md-12 text-center">
                             <div class="table-responsive">
+                                <div class="table-responsive-sm table-bordered">
                                 <table class="table table-striped">
                                     <thead>
                                         <tr>
@@ -71,6 +73,7 @@
                                         </tr>
                                     </tbody>
                                 </table>
+                            </div>
                             </div>
                         </div>
                     </div>
@@ -108,8 +111,8 @@
 
     </div>
     <div class="modal-footer">
-        <button type="button" class="btn btn-success" (click)="c('Save click')">Modificar </button>
-        <button type="button" class="btn btn-primary" (click)="d('Cross click')">Cancelar </button>
+        <button type="button" class="btn bg-gradient-red text-white" (click)="c('Save click')">Modificar </button>
+        <button type="button" class="btn bg-gradient-red text-white" (click)="d('Cross click')">Cancelar </button>
     </div>
 </ng-template>
 

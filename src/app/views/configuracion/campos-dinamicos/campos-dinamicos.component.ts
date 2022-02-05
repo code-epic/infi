@@ -24,11 +24,11 @@ export class CamposDinamicosComponent implements OnInit {
   }
 
   modficar(content){
-    const modalRef = this.modalService.open(content, { size: 'xl', backdrop: 'static' });
+    const modalRef = this.modalService.open(content, { size: 'lg', backdrop: 'static' });
   }
 
   add(content) {
-    this.modalService.open(content,{ size: 'xl', backdrop: 'static' });
+    this.modalService.open(content,{ size: 'lg', backdrop: 'static' });
     
   }
 

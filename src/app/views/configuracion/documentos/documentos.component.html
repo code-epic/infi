@@ -25,30 +25,38 @@
               </div> 
             </div>
               <div class="form-row">
-                <div class="form-group col-md-6">                  
+                <div class="form-group col-md-4">                  
                   <select name="" id="tipoDocumentos" (change)="tipoDocumentos($event.target.value)" class="form-control">
                           <option value="">Unidad de inversion</option>
                   </select>
                 </div>
-                <div class="form-group col-md-6">             
+                <div class="form-group col-md-4">             
                   <select name="" id="tipoDocumentos" (change)="tipoDocumentos($event.target.value)" class="form-control">
                           <option value="">Transaccion</option>
                   </select>
                 </div>
-              </div>
-              <div class="form-row">
-                <div class="form-group col-md-6">               
+                <div class="form-group col-md-4">               
                   <select name="" id="tipoDocumentos" (change)="tipoDocumentos($event.target.value)" class="form-control">
                           <option value="">Estatus</option>
                           <option value="P">APROBADO</option>
                           <option value="E">REGISTRADO</option>
                   </select>
                 </div>
+              </div>
+              <div class="form-row">
+               
                 <div class="form-group col-md-6">               
                   <select name="" id="tipoDocumentos" (change)="tipoDocumentos($event.target.value)" class="form-control">
                           <option value="">Creado por</option>
                           <option value="P">Angel</option>
                           <option value="E">Jesus</option>
+                  </select>
+                </div>
+                <div class="form-group col-md-6">               
+                  <select name="" id="tipoDocumentos" (change)="tipoDocumentos($event.target.value)" class="form-control">
+                          <option value="">Aprobado por</option>
+                          <option value="P">Antonio</option>
+                          <option value="E">Gustavo</option>
                   </select>
                 </div>
               </div>
@@ -71,27 +79,19 @@
                <div class="form-row">
 
                 <div class="form-group col-md-4">                   
-                    <input type="text" ngbDatepicker #a="ngbDatepicker" class="form-control" placeholder="Fecha aprovacion desde">                  
+                    <input type="text" ngbDatepicker #a="ngbDatepicker" class="form-control" placeholder="Fecha aprobacion desde">                  
                 </div>
                 <div class="form-group col-md-2 topIconCalendario" >  
                   <i class="far fa-calendar-alt " (click)="a.toggle()"></i>
                 </div>
                 <div class="form-group col-md-4">                   
-                  <input type="text" ngbDatepicker #b="ngbDatepicker" class="form-control" placeholder="Fecha aprovacion hasta">                  
+                  <input type="text" ngbDatepicker #b="ngbDatepicker" class="form-control" placeholder="Fecha aprobacion hasta">                  
               </div>
               <div class="form-group col-md-2 topIconCalendario" >  
                 <i class="far fa-calendar-alt " (click)="b.toggle()"></i>
               </div>
                </div>
-               <div class="form-row">
-                <div class="form-group col-md-6">               
-                  <select name="" id="tipoDocumentos" (change)="tipoDocumentos($event.target.value)" class="form-control">
-                          <option value="">Aprobado por</option>
-                          <option value="P">Antonio</option>
-                          <option value="E">Gustavo</option>
-                  </select>
-                </div>
-               </div> 
+                
               <div class="row">                   
                   <div class="col-md-12">
                       <div class="text-center">

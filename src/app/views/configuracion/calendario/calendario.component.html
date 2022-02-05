@@ -16,11 +16,20 @@
                         </div>
                     </div>
                 </div>
+                
                 <div class="card-body">
-                    <div class="row top5">
-                        <div class="col-md-12">
-                            <div class="table-responsive">
-                                <table class="table table-striped">
+                    <div class="row">
+                        <div class="col-md-12 top">
+                            <div>
+                                <button type="submit" class="btn bg-gradient-red text-white" (click)="add(agregar)">+ Agregar +<i aria-hidden="true"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row top">
+                        <div class="col-md-12 text-center">
+                            <table class="table-responsive">
+                                <div class="table-responsive-sm table-bordered">
+                                <table class="table">
                                     <thead>
                                         <tr>
                                             <th scope="col">Fecha no laboral</th>
@@ -35,15 +44,12 @@
                                     </tbody>
                                 </table>
                             </div>
+                        </table>
                         </div>
+                        
+                        
                     </div>
-                    <div class="row">
-                        <div class="col-md-12 top">
-                            <div class="text-center">
-                                <button type="submit" class="btn bg-gradient-red text-white" (click)="add(agregar)">Agregar <i aria-hidden="true"></i></button>
-                            </div>
-                        </div>
-                    </div>
+                    
                 </div>
             </div>
         </div>
