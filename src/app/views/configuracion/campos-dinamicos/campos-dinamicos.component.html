@@ -1,4 +1,4 @@
-<div class="header bg-gradient-success pb-8 pt-5 pt-md-8">
+<div class="header bg-gradient-red pb-8 pt-5 pt-md-8">
     <div class="container-fluid">
         <p></p>
     </div>
@@ -15,6 +15,17 @@
                             <h2 class="mb-0">Informacion</h2>
                         </div>
                     </div>
+                </div>
+                <div class="card-body">
+
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div>
+                                <button type="submit" class="btn bg-gradient-red text-white" (click)="add(agregar)">+ Agregar campo +<i aria-hidden="true"></i></button>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
                 <div class="row top">
                     <div class="col-md-12">
@@ -43,17 +54,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="card-body">
-
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="text-center">
-                                <button type="submit" class="btn btn-success" (click)="add(agregar)">Agregar <i class="fas fa-check-double"></i></button>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
+            
             </div>
         </div>
     </div>
@@ -62,7 +63,7 @@
 
 
 <ng-template #content let-c="close" let-d="dismiss">
-    <div class="modal-header headerModal">
+    <div class="modal-header bg-gradient-red">
         <h4 class="modal-title tituloModal" id="modal-basic-title">Editar Registro</h4>
         <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
         <span aria-hidden="true">&times;</span>
@@ -120,7 +121,7 @@
 
 
 <ng-template #agregar let-c="close" let-d="dismiss">
-    <div class="modal-header headerModal">
+    <div class="modal-header bg-gradient-red">
         <h4 class="modal-title tituloModal" id="modal-basic-title">Agregar accion</h4>
         <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
         <span aria-hidden="true">&times;</span>
