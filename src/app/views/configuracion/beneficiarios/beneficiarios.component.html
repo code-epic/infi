@@ -17,48 +17,53 @@
                     </div>
                 </div>
                 <div class="card-body">
-                    <!-- Chart -->
                     <div class="row">
                         <div class="col-md-12">
                             <div>
-                                <button type="submit" class="btn bg-gradient-red text-white" (click)="add(agregar)">Agregar <i aria-hidden="true"></i></button>
+                                <button type="submit" class="btn bg-gradient-red text-white" (click)="add(agregar)"> +
+                                    Agregar + <i aria-hidden="true"></i></button>
                             </div>
                         </div>
                     </div>
                     <form>
-                        <div class="form-row top">
-                            <div class="form-group col-md-3">
+                        <div class="form-row justify-content-md-center mb-2 top">
+                            <div class="form-group col-md-2">
                                 <input type="text" class="form-control" id="nombre" placeholder="Nombre de beneficiario">
                             </div>
-                            <div class="form-group col-md-4">
+                            <div class="form-group col-md-3">
                                 <input type="text" class="form-control" id="des" placeholder="Descripcion">
                             </div>
-                            <div class="form-group col-md-4">
-                                <button type="submit" class="btn bg-gradient-red text-white">Buscar<i aria-hidden="true"></i></button>
+                            <div class="form-group col-md-2">
+                                <button type="submit" class="btn bg-gradient-red text-white">++ Buscar ++<i
+                                        aria-hidden="true"></i></button>
                             </div>
                         </div>
                     </form>
                     <div class="row top">
-                        <div class="col-md-12">
-                            <table class="table table-striped">
-                                <thead>
-                                    <tr>
-                                        <th scope="col">Nombre</th>
-                                        <th scope="col">Descripcion</th>
-                                        <th scope="col">Acción</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>Banco de venezuela</td>
-                                        <td>Banco de venezuela</td>
-                                        <td>
-                                            <i class="fas fa-edit iconEdit" (click)="modficar(content)"></i>
-                                            <i class="far fa-trash-alt iconElimi" (click)="open(eliminar)"></i>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                        <div class="col-md-12 text-center">
+                            <div class="table-responsive">
+                                <div class="table-responsive-sm table-bordered">
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">Nombre</th>
+                                                <th scope="col">Descripcion</th>
+                                                <th scope="col">Acción</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Banco de venezuela</td>
+                                                <td>Banco de venezuela</td>
+                                                <td>
+                                                    <i class="fas fa-edit iconEdit" (click)="modficar(content)"></i>
+                                                    <i class="far fa-trash-alt iconElimi" (click)="open(eliminar)"></i>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -73,18 +78,18 @@
     <div class="modal-header bg-gradient-red">
         <h4 class="modal-title tituloModal" id="modal-basic-title">Editar Registro</h4>
         <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
-        <span aria-hidden="true">&times;</span>
-      </button>
+            <span aria-hidden="true">&times;</span>
+        </button>
     </div>
     <div class="modal-body">
 
         <div class="row">
             <div class="col-md-6">
-                <label for="">Nombre de beneficiario</label>
+                <label for="">Nombre</label>
                 <input type="text" class="form-control">
             </div>
             <div class="col-md-6">
-                <label for="">Descripcion del benefiario</label>
+                <label for="">Descripcion</label>
                 <input type="text" class="form-control">
             </div>
         </div>
@@ -110,8 +115,8 @@
     <div class="modal-header headerModalE">
         <h4 class="modal-title tituloModal" id="modal-basic-title">Eliminar Registro</h4>
         <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
-        <span aria-hidden="true">&times;</span>
-      </button>
+            <span aria-hidden="true">&times;</span>
+        </button>
     </div>
     <div class="modal-body">
         <p>Estas Seguro de eliminar el Siguiente Registro <strong> Descripción: Banco de venezuela</strong> </p>
@@ -127,8 +132,8 @@
     <div class="modal-header bg-gradient-red">
         <h4 class="modal-title tituloModal" id="modal-basic-title">Agregar accion</h4>
         <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
-        <span aria-hidden="true">&times;</span>
-      </button>
+            <span aria-hidden="true">&times;</span>
+        </button>
     </div>
     <div class="modal-body">
 
