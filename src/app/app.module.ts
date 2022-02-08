@@ -38,6 +38,7 @@ import { TitulosComponent } from './views/configuracion/titulos/titulos.componen
 import { TransaccionesfijasComponent } from './views/configuracion/transaccionesfijas/transaccionesfijas.component';
 import { UsuariosespecialesComponent } from './views/configuracion/usuariosespeciales/usuariosespeciales.component';
 import { OficinasComercialesComponent } from './views/configuracion/oficinas-comerciales/oficinas-comerciales.component';
+import { TransaccionComponent } from './views/custodia/transaccion/transaccion.component';
 
 @NgModule({
   imports: [
@@ -79,7 +80,8 @@ import { OficinasComercialesComponent } from './views/configuracion/oficinas-com
     TitulosComponent,
     TransaccionesfijasComponent,
     UsuariosespecialesComponent,
-    OficinasComercialesComponent
+    OficinasComercialesComponent,
+    TransaccionComponent
   ],
   providers: [],
   bootstrap: [AppComponent]
