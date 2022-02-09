@@ -28,6 +28,7 @@ import { TransaccionesfijasComponent } from 'src/app/views/configuracion/transac
 import { UsuariosespecialesComponent } from 'src/app/views/configuracion/usuariosespeciales/usuariosespeciales.component';
 import { OficinasComercialesComponent } from 'src/app/views/configuracion/oficinas-comerciales/oficinas-comerciales.component';
 import { TransaccionComponent } from 'src/app/views/custodia/transaccion/transaccion.component';
+import { TituloComponent } from 'src/app/views/custodia/titulo/titulo.component';
 
 export const AdminLayoutRoutes: Routes = [
     { path: 'dashboard', component: DashboardComponent },
@@ -57,5 +58,6 @@ export const AdminLayoutRoutes: Routes = [
     { path: 'transaccionesfijas', component: TransaccionesfijasComponent},
     { path: 'usuariosespeciales', component: UsuariosespecialesComponent},
     { path:'oficinasComerciales', component:OficinasComercialesComponent},
-    { path:'transaccion', component:TransaccionComponent}
+    { path:'transaccion', component:TransaccionComponent},
+    { path: 'custodiaTitulo', component:TituloComponent } 
 ];
