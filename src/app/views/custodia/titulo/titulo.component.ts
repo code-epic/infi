@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {NgbDateStruct} from '@ng-bootstrap/ng-bootstrap';
+import {NgbDateStruct, NgbModalConfig, NgbModal} from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-titulo',
@@ -15,9 +15,21 @@ export class TituloComponent implements OnInit {
   
   placement = 'bottom';
 
-  constructor() { }
+  constructor(config: NgbModalConfig, private modalService: NgbModal) {
+    config.backdrop = 'static';
+    config.keyboard = false;
+    
+  }
 
   ngOnInit(): void {
+  }
+
+  detalle(content){
+    const modalRef = this.modalService.open(content, { size: 'xl', backdrop: 'static' });
+  }
+
+  cliente(content){
+    const modalRef = this.modalService.open(content, { size: 'xl', backdrop: 'static' });
   }
 
 }

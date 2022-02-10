@@ -40,6 +40,7 @@ import { UsuariosespecialesComponent } from './views/configuracion/usuariosespec
 import { OficinasComercialesComponent } from './views/configuracion/oficinas-comerciales/oficinas-comerciales.component';
 import { TransaccionComponent } from './views/custodia/transaccion/transaccion.component';
 import { TituloComponent } from './views/custodia/titulo/titulo.component';
+import { DetalleTituloComponent } from './views/custodia/detalle-titulo/detalle-titulo.component';
 
 @NgModule({
   imports: [
@@ -83,7 +84,8 @@ import { TituloComponent } from './views/custodia/titulo/titulo.component';
     UsuariosespecialesComponent,
     OficinasComercialesComponent,
     TransaccionComponent,
-    TituloComponent
+    TituloComponent,
+    DetalleTituloComponent
   ],
   providers: [],
   bootstrap: [AppComponent]

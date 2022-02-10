@@ -157,8 +157,8 @@
                                             <td>DEB</td>
                                             <td>0</td>
                                             <td>
-                                                <i class="fas fa-history iconEdit" ngbTooltip="Historial Cliente" ></i>
-                                                <i class="fas fa-folder iconElimi" ngbTooltip="Detalle Título" ></i>
+                                                <i class="fas fa-history iconEdit" ngbTooltip="Historial Cliente" (click)="cliente(ClienteDe)" ></i>
+                                                <i class="fas fa-folder iconElimi" ngbTooltip="Detalle Título"  (click)="detalle(detalleM)" ></i>
                                                
                                             </td>    
                                         </tr>
@@ -175,9 +175,79 @@
     </div>    
   </div>
   
-  <ng-template #content let-c="close" let-d="dismiss">
+  <ng-template #detalleM let-c="close" let-d="dismiss">
     <div class="modal-header headerModal">
-      <h4 class="modal-title tituloModal" id="modal-basic-title">Editar Transacciones Fijas</h4>
+      <h4 class="modal-title tituloModal" id="modal-basic-title">Título Detalle</h4>
+      <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+  
+        <div class="row">
+            <div class="col-md-3 mb-4 text-left">
+                <label for="">Serial de Identificación (Isin)</label>
+                <input type="text" class="form-control" placeholder="" disabled>
+            </div>
+            <div class="col-md-3 mb-4 text-left">
+                <label for="">Título</label>
+                <input type="text" class="form-control" value="ARGENTINA (FRNL)" disabled>
+            </div>
+            <div class="col-md-3 mb-4 text-left">
+              <label for="">Descripción</label>
+              <input type="text" class="form-control" value="ARGENTINA (FRNL) -VTO 03-31-15" disabled>
+            </div>
+            <div class="col-md-3 mb-4 text-left">
+              <label for="">Valor Nominal</label>
+              <input type="text" class="form-control" value="1" disabled>
+          </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3 mb-4 text-left">
+                <label for="">Moneda Denominación</label>
+                <input type="text" class="form-control" placeholder=""  value="USD" disabled>
+            </div>
+            <div class="col-md-3 mb-4 text-left">
+              <label for="">Moneda Negociación</label>
+              <input type="text" class="form-control" placeholder=""  value="USD" disabled>
+            </div>
+            <div class="col-md-3 mb-4 text-left">
+              <label for="">Fecha Emisión</label>
+              <input type="text" class="form-control" placeholder=""  value="21/12/2000" disabled>
+            </div>
+            <div class="col-md-3 mb-4 text-left">
+              <label for="">Fecha Vencimiento</label>
+              <input type="text" class="form-control" placeholder=""  value="31/03/2055" disabled>
+            </div>     
+        </div>
+        <div class="row">
+          <div class="col-md-3 mb-4 text-left">
+            <label for="">Fecha Proximo Cupón</label>
+            <input type="text" class="form-control" placeholder=""  value="" disabled>
+          </div>  
+          <div class="col-md-3 mb-4 text-left">
+            <label for="">Fecha Último Cupón</label>
+            <input type="text" class="form-control" placeholder=""  value="" disabled>
+          </div>
+          <div class="col-md-3 mb-4 text-left">
+            <label for="">Fecha Proxima Amortización</label>
+            <input type="text" class="form-control" placeholder=""  value="" disabled>
+          </div> 
+          <div class="col-md-3 mb-4 text-left">
+            <label for="">Fecha Última Amortización</label>
+            <input type="text" class="form-control" placeholder=""  value="" disabled>
+          </div> 
+        </div>
+        
+    </div>
+    <div class="modal-footer">     
+      <button type="button" class="btn bg-gradient-red text-white" (click)="d('Cross click')">Cerrar</button>
+    </div>
+  </ng-template>
+
+  <ng-template #ClienteDe let-c="close" let-d="dismiss">
+    <div class="modal-header headerModal">
+      <h4 class="modal-title tituloModal" id="modal-basic-title">Datos del Cliente</h4>
       <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
         <span aria-hidden="true">&times;</span>
       </button>
@@ -186,41 +256,31 @@
   
         <div class="row">
             <div class="col-md-4 mb-4 text-left">
-                <label for="">Código</label>
-                <input type="text" class="form-control" placeholder="001" disabled>
-            </div>
-            <div class="col-md-8 mb-4 text-left">
-                <label for="">Transacción Negocio</label>
-                <input type="text" class="form-control" placeholder="VENTA_TITULOS" disabled>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-6 mb-4 text-left">
                 <label for="">Nombre</label>
-                <input type="text" class="form-control" placeholder="Venta de Títulos" disabled>
+                <input type="text" class="form-control" value="ANDREINA ESCALONA MARQUEZ" disabled>
             </div>
-            <div class="col-md-6 mb-4 text-left">
-                <label for="">Descripción</label>
-                <input type="text" class="form-control" placeholder="Operación de venta de títulos del banco de venezuela" disabled>
-            </div>  
-        </div>
-        <div class="row">
-            <div class="col-md-6 text-left">
-                <label for="">Tipo</label>
-                <input type="text" class="form-control" placeholder="CRE" disabled>
+            <div class="col-md-4 mb-4 text-left">
+                <label for="">Cedula o Rif</label>
+                <input type="text" class="form-control" value="15516673" disabled>
             </div>
-            <div class="col-md-6 text-left">
-                <label for="">Valor Operación</label>
-                <input type="text" class="form-control" placeholder="000">
+            <div class="col-md-4 mb-4 text-left">
+              <label for="">Tipo</label>
+              <input type="text" class="form-control" value="VENEZOLANO" disabled>
             </div>
         </div>
-        
+        <div class="row justify-content-md-center">
+            <div class="col-md-3 mb-4 text-left">
+                <label for="">Número Cuenta Custodia</label>
+                <input type="text" class="form-control" placeholder=""  value="52" disabled>
+            </div>
+            <div class="col-md-3 mb-4 text-left">
+              <label for="">Fecha Cuenta Custodia</label>
+              <input type="text" class="form-control" placeholder=""  value="29/07/2009" disabled>
+            </div>    
+        </div>        
     </div>
-    <div class="modal-footer">
-      <button type="button" class="btn bg-gradient-red text-white" (click)="c('Save click')">Modificar </button>
-      <button type="button" class="btn bg-gradient-red text-white" (click)="d('Cross click')">Cancelar </button>
+    <div class="modal-footer">     
+      <button type="button" class="btn bg-gradient-red text-white" (click)="d('Cross click')">Cerrar</button>
     </div>
   </ng-template>
-
-
 
