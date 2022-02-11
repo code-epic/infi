@@ -30,6 +30,7 @@ import { OficinasComercialesComponent } from 'src/app/views/configuracion/oficin
 import { TransaccionComponent } from 'src/app/views/custodia/transaccion/transaccion.component';
 import { TituloComponent } from 'src/app/views/custodia/titulo/titulo.component';
 import { DetalleTituloComponent } from 'src/app/views/custodia/detalle-titulo/detalle-titulo.component';
+import { MovimientosComponent } from 'src/app/views/custodia/movimientos/movimientos.component';
 
 export const AdminLayoutRoutes: Routes = [
     { path: 'dashboard', component: DashboardComponent },
@@ -61,5 +62,6 @@ export const AdminLayoutRoutes: Routes = [
     { path:'oficinasComerciales', component:OficinasComercialesComponent},
     { path:'transaccion', component:TransaccionComponent},
     { path: 'custodiaTitulo', component:TituloComponent },
-    { path: 'custodiaDetalleTitulo', component:DetalleTituloComponent} 
+    { path: 'custodiaDetalleTitulo', component:DetalleTituloComponent},
+    { path:'custodiaMovimiento', component: MovimientosComponent} 
 ];

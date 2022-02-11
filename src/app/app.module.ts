@@ -41,6 +41,7 @@ import { OficinasComercialesComponent } from './views/configuracion/oficinas-com
 import { TransaccionComponent } from './views/custodia/transaccion/transaccion.component';
 import { TituloComponent } from './views/custodia/titulo/titulo.component';
 import { DetalleTituloComponent } from './views/custodia/detalle-titulo/detalle-titulo.component';
+import { MovimientosComponent } from './views/custodia/movimientos/movimientos.component';
 
 @NgModule({
   imports: [
@@ -85,7 +86,8 @@ import { DetalleTituloComponent } from './views/custodia/detalle-titulo/detalle-
     OficinasComercialesComponent,
     TransaccionComponent,
     TituloComponent,
-    DetalleTituloComponent
+    DetalleTituloComponent,
+    MovimientosComponent
   ],
   providers: [],
   bootstrap: [AppComponent]
