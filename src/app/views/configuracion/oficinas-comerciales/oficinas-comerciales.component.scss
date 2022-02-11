@@ -41,7 +41,12 @@
     margin-top: 2% !important;
 }
 
-.margenBoton{
-    display: inline-block !important;
-    margin-bottom: 3.5rem !important;
+.text{
+   font-weight: bold; 
+}
+
+.agregar{
+    color: #5e72e4;
+    font-weight: bold;
+    cursor: pointer;
 }

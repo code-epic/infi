@@ -1,4 +1,4 @@
-<div class="header bg-gradient-success pb-8 pt-5 pt-md-8">
+<div class="header bg-gradient-red pb-8 pt-5 pt-md-8">
     <div class="container-fluid">
         <p></p>
     </div>
@@ -19,58 +19,62 @@
                 <div class="card-body">
                     <!-- Chart -->
                     <form>
-                        <div class="form-row">
-                            <div class="form-group col-md-6">
-                                <label for="url">Url</label>
-                                <input type="text" class="form-control" id="nombre" placeholder="Accion" value="/">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div>
+                                    <button type="submit" class="btn bg-gradient-red text-white" (click)="add(agregar)"> + Agregar + <i aria-hidden="true"></i></button>
+                                </div>
                             </div>
                         </div>
-                        <div class="form-row">
-                            <div class="form-group col-md-6">
-                                <label for="inputEmail4">Tipo Cliente</label>
+                        <div class="form-row justify-content-md-center mb-2 top5">
+                            <div class="form-group col-md-4">
+                                <input type="text" class="form-control" id="nombre" placeholder="URL - Accion">
+                            </div>
+                            <div class="form-group col-md-2">
                                 <select name="" id="tipoAuditoria" class="form-control">
-                                    <option value="">Todos</option>
+                                    <option value="">Tipo Cliente</option>
                                     <option value="P">1</option>
                                     <option value="E">2</option>
                                 </select>
                             </div>
 
-                        </div>
+                            <div class="form-group col-md-2">
 
+                                <button type="submit" class="btn bg-gradient-red text-white">Buscar<i aria-hidden="true"></i></button>
 
-                        <div class="row">
-                            <div class="col-md-12">
-                                <div class="text-center">
-                                    <button type="submit" class="btn btn-success">Procesar <i class="fas fa-check-double"></i></button>
-                                    <button type="submit" class="btn btn-success" (click)="add(agregar)">Agregar <i class="fas fa-check-double"></i></button>
-                                    <button type="submit" class="btn btn-primary">Salir <i class="far fa-trash-alt"></i></button>
-                                </div>
                             </div>
                         </div>
+
+
+
                     </form>
                     <div class="row top5">
-                        <div class="col-md-12">
-                            <table class="table table-striped">
-                                <thead>
-                                    <tr>
-                                        <th scope="col">Url</th>
-                                        <th scope="col">Auditable</th>
-                                        <th scope="col">Parametros</th>
-                                        <th scope="col">Acción</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>/prueba</td>
-                                        <td>SI</td>
-                                        <td>Parametro</td>
-                                        <td>
-                                            <i class="fas fa-edit iconEdit" (click)="modficar(content)"></i>
-                                            <i class="far fa-trash-alt iconElimi" (click)="open(eliminar)"></i>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                        <div class="col-md-12 text-center">
+                            <div class="table-responsive">
+                                <div class="table-responsive-sm table-bordered">
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">Url</th>
+                                                <th scope="col">Auditable</th>
+                                                <th scope="col">Parametros</th>
+                                                <th scope="col">Acción</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>/prueba</td>
+                                                <td>SI</td>
+                                                <td>Parametro</td>
+                                                <td>
+                                                    <i class="fas fa-edit iconEdit" (click)="modficar(content)"></i>
+                                                    <i class="far fa-trash-alt iconElimi" (click)="open(eliminar)"></i>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -82,7 +86,7 @@
 
 
 <ng-template #content let-c="close" let-d="dismiss">
-    <div class="modal-header headerModal">
+    <div class="modal-header bg-gradient-red">
         <h4 class="modal-title tituloModal" id="modal-basic-title">Editar Registro</h4>
         <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
         <span aria-hidden="true">&times;</span>
@@ -91,7 +95,7 @@
     <div class="modal-body">
 
         <div class="row">
-            <div class="col-md-4">
+            <div class="col-md-12">
                 <label for="">Url</label>
                 <input type="text" class="form-control" value="/">
             </div>
@@ -107,8 +111,8 @@
 
     </div>
     <div class="modal-footer">
-        <button type="button" class="btn btn-success" (click)="c('Save click')">Modificar </button>
-        <button type="button" class="btn btn-primary" (click)="d('Cross click')">Cancelar </button>
+        <button type="button" class="btn bg-gradient-red text-white" (click)="c('Save click')">Modificar </button>
+        <button type="button" class="btn bg-gradient-red text-white" (click)="d('Cross click')">Cancelar </button>
     </div>
 </ng-template>
 
@@ -124,14 +128,14 @@
         <p>Estas Seguro de eliminar el Siguiente Registro <strong> Descripción: /prueba</strong> </p>
     </div>
     <div class="modal-footer">
-        <button type="button" class="btn btn-danger" (click)="c('Save click')">Eliminar </button>
-        <button type="button" class="btn btn-primary" (click)="d('Cross click')">Cancelar </button>
+        <button type="button" class="btn bg-gradient-red text-white" (click)="c('Save click')">Eliminar </button>
+        <button type="button" class="btn bg-gradient-red text-white" (click)="d('Cross click')">Cancelar </button>
     </div>
 </ng-template>
 
 
 <ng-template #agregar let-c="close" let-d="dismiss">
-    <div class="modal-header headerModal">
+    <div class="modal-header bg-gradient-red">
         <h4 class="modal-title tituloModal" id="modal-basic-title">Agregar accion</h4>
         <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
         <span aria-hidden="true">&times;</span>
@@ -140,7 +144,7 @@
     <div class="modal-body">
 
         <div class="row">
-            <div class="col-md-4">
+            <div class="col-md-12">
                 <label for="">Url</label>
                 <input type="text" class="form-control" value="/">
             </div>
@@ -156,7 +160,7 @@
 
     </div>
     <div class="modal-footer">
-        <button type="button" class="btn btn-success" (click)="c('Save click')">Agregar </button>
-        <button type="button" class="btn btn-primary" (click)="d('Cross click')">Cancelar </button>
+        <button type="button" class="btn bg-gradient-red text-white" (click)="c('Save click')">Agregar </button>
+        <button type="button" class="btn bg-gradient-red text-white" (click)="d('Cross click')">Cancelar </button>
     </div>
 </ng-template>

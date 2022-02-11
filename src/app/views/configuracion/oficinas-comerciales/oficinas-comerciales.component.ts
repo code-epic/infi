@@ -2,14 +2,15 @@ import { Component, OnInit } from '@angular/core';
 import { NgbModalConfig, NgbModal } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
-  selector: 'app-auditoria',
-  templateUrl: './auditoria.component.html',
-  styleUrls: ['./auditoria.component.scss']
+  selector: 'app-oficinas-comerciales',
+  templateUrl: './oficinas-comerciales.component.html',
+  styleUrls: ['./oficinas-comerciales.component.scss']
 })
-export class AuditoriaComponent implements OnInit {
+export class OficinasComercialesComponent implements OnInit {
+
+  public oficina : string;
 
   constructor(config: NgbModalConfig, private modalService: NgbModal) {
-    // customize default values of modals used by this component tree
     config.backdrop = 'static';
     config.keyboard = false;
     
@@ -19,16 +20,13 @@ export class AuditoriaComponent implements OnInit {
   }
 
   open(content) {
+    
     this.modalService.open(content);
     
   }
 
   modficar(content){
-    const modalRef = this.modalService.open(content);
-  }
-
-  add(content) {
-    this.modalService.open(content);
+        const modalRef = this.modalService.open(content, { size: 'xl', backdrop: 'static' });
   }
 
 

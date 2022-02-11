@@ -19,13 +19,18 @@ import { IndicadoresComponent} from 'src/app/views/configuracion/indicadores/ind
 import { PaisesComponent } from 'src/app/views/configuracion/paises/paises.component';
 import { OficinasComponent } from 'src/app/views/configuracion/oficinas/oficinas.component';
 import { InstrumentosFinancierosComponent } from 'src/app/views/configuracion/instrumentos-financieros/instrumentos-financieros.component';
+import { OficinaDetallesComponent } from 'src/app/views/configuracion/oficina-detalles/oficina-detalles.component';
 import { FechavalorComponent } from 'src/app/views/configuracion/fechavalor/fechavalor.component';
 import { GeneralesComponent } from 'src/app/views/configuracion/generales/generales.component';
 import { RecompraComponent } from 'src/app/views/configuracion/recompra/recompra.component';
 import { TitulosComponent } from 'src/app/views/configuracion/titulos/titulos.component';
 import { TransaccionesfijasComponent } from 'src/app/views/configuracion/transaccionesfijas/transaccionesfijas.component';
 import { UsuariosespecialesComponent } from 'src/app/views/configuracion/usuariosespeciales/usuariosespeciales.component';
-
+import { OficinasComercialesComponent } from 'src/app/views/configuracion/oficinas-comerciales/oficinas-comerciales.component';
+import { TransaccionComponent } from 'src/app/views/custodia/transaccion/transaccion.component';
+import { TituloComponent } from 'src/app/views/custodia/titulo/titulo.component';
+import { DetalleTituloComponent } from 'src/app/views/custodia/detalle-titulo/detalle-titulo.component';
+import { MovimientosComponent } from 'src/app/views/custodia/movimientos/movimientos.component';
 
 export const AdminLayoutRoutes: Routes = [
     { path: 'dashboard', component: DashboardComponent },
@@ -47,10 +52,16 @@ export const AdminLayoutRoutes: Routes = [
     { path: 'paises', component:PaisesComponent},
     { path: 'oficinas', component:OficinasComponent},
     { path: 'instFinancieros', component:InstrumentosFinancierosComponent},
+    { path: 'ofidetalle', component:OficinaDetallesComponent},
     { path: 'fechavalor', component: FechavalorComponent},
     { path: 'generales', component: GeneralesComponent},
     { path: 'recompra', component: RecompraComponent},
     { path: 'titulos', component: TitulosComponent},
     { path: 'transaccionesfijas', component: TransaccionesfijasComponent},
-    { path: 'usuariosespeciales', component: UsuariosespecialesComponent}
+    { path: 'usuariosespeciales', component: UsuariosespecialesComponent},
+    { path:'oficinasComerciales', component:OficinasComercialesComponent},
+    { path:'transaccion', component:TransaccionComponent},
+    { path: 'custodiaTitulo', component:TituloComponent },
+    { path: 'custodiaDetalleTitulo', component:DetalleTituloComponent},
+    { path:'custodiaMovimiento', component: MovimientosComponent} 
 ];

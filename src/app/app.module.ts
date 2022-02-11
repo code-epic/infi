@@ -30,12 +30,18 @@ import { IndicadoresComponent } from './views/configuracion/indicadores/indicado
 import { PaisesComponent } from './views/configuracion/paises/paises.component';
 import { OficinasComponent } from './views/configuracion/oficinas/oficinas.component';
 import { InstrumentosFinancierosComponent } from './views/configuracion/instrumentos-financieros/instrumentos-financieros.component';
+import { OficinaDetallesComponent } from './views/configuracion/oficina-detalles/oficina-detalles.component';
 import { FechavalorComponent } from './views/configuracion/fechavalor/fechavalor.component';
 import { GeneralesComponent } from './views/configuracion/generales/generales.component';
 import { RecompraComponent } from './views/configuracion/recompra/recompra.component';
 import { TitulosComponent } from './views/configuracion/titulos/titulos.component';
 import { TransaccionesfijasComponent } from './views/configuracion/transaccionesfijas/transaccionesfijas.component';
 import { UsuariosespecialesComponent } from './views/configuracion/usuariosespeciales/usuariosespeciales.component';
+import { OficinasComercialesComponent } from './views/configuracion/oficinas-comerciales/oficinas-comerciales.component';
+import { TransaccionComponent } from './views/custodia/transaccion/transaccion.component';
+import { TituloComponent } from './views/custodia/titulo/titulo.component';
+import { DetalleTituloComponent } from './views/custodia/detalle-titulo/detalle-titulo.component';
+import { MovimientosComponent } from './views/custodia/movimientos/movimientos.component';
 
 @NgModule({
   imports: [
@@ -70,12 +76,18 @@ import { UsuariosespecialesComponent } from './views/configuracion/usuariosespec
     PaisesComponent,
     OficinasComponent,
     InstrumentosFinancierosComponent,
+    OficinaDetallesComponent,
     FechavalorComponent,
     GeneralesComponent,
     RecompraComponent,
     TitulosComponent,
     TransaccionesfijasComponent,
-    UsuariosespecialesComponent
+    UsuariosespecialesComponent,
+    OficinasComercialesComponent,
+    TransaccionComponent,
+    TituloComponent,
+    DetalleTituloComponent,
+    MovimientosComponent
   ],
   providers: [],
   bootstrap: [AppComponent]

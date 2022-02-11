@@ -2,11 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { NgbModalConfig, NgbModal } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
-  selector: 'app-campos-dinamicos',
-  templateUrl: './campos-dinamicos.component.html',
-  styleUrls: ['./campos-dinamicos.component.scss']
+  selector: 'app-transaccion',
+  templateUrl: './transaccion.component.html',
+  styleUrls: ['./transaccion.component.scss']
 })
-export class CamposDinamicosComponent implements OnInit {
+export class TransaccionComponent implements OnInit {
 
   constructor(config: NgbModalConfig, private modalService: NgbModal) {
     // customize default values of modals used by this component tree
@@ -24,12 +24,11 @@ export class CamposDinamicosComponent implements OnInit {
   }
 
   modficar(content){
-    const modalRef = this.modalService.open(content, { size: 'lg', backdrop: 'static' });
+    const modalRef = this.modalService.open(content,{ size: 'xl', backdrop: 'static' });
   }
 
-  add(content) {
-    this.modalService.open(content,{ size: 'lg', backdrop: 'static' });
-    
+  detalle(content){
+    const modalRef = this.modalService.open(content,{ size: 'xl', backdrop: 'static' });
   }
-
+  
 }
