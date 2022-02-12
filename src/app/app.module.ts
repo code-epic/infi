@@ -3,12 +3,11 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
-
 import { AppComponent } from './app.component';
 import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
 import { AuthLayoutComponent } from './layouts/auth-layout/auth-layout.component';
-
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { NgWizardModule, NgWizardConfig, THEME } from 'ng-wizard';
 
 import { AppRoutingModule } from './app.routing';
 import { ComponentsModule } from './components/components.module';
@@ -55,6 +54,10 @@ import { DetalleTituloComponent } from './views/custodia/detalle-titulo/detalle-
 import { MovimientosComponent } from './views/custodia/movimientos/movimientos.component';
 import { CuponesComponent } from './views/custodia/cupones/cupones.component';
 
+const ngWizardConfig: NgWizardConfig = {
+  theme: THEME.circles
+};
+
 @NgModule({
   imports: [
     BrowserAnimationsModule,
@@ -63,7 +66,8 @@ import { CuponesComponent } from './views/custodia/cupones/cupones.component';
     ComponentsModule,
     NgbModule,
     RouterModule,
-    AppRoutingModule
+    AppRoutingModule,
+    NgWizardModule.forRoot(ngWizardConfig)
 
   ],
   declarations: [
