@@ -50,6 +50,9 @@ import { CargaInicialComponent } from './views/custodia/carga-inicial/carga-inic
 import { CargaInicialDosComponent } from './views/custodia/carga-inicial-dos/carga-inicial-dos.component';
 import { CargaInicialTresComponent } from './views/custodia/carga-inicial-tres/carga-inicial-tres.component';
 import { CargaInicialCuatroComponent } from './views/custodia/carga-inicial-cuatro/carga-inicial-cuatro.component';
+import { TituloComponent } from './views/custodia/titulo/titulo.component';
+import { DetalleTituloComponent } from './views/custodia/detalle-titulo/detalle-titulo.component';
+import { MovimientosComponent } from './views/custodia/movimientos/movimientos.component';
 
 @NgModule({
   imports: [
@@ -104,6 +107,9 @@ import { CargaInicialCuatroComponent } from './views/custodia/carga-inicial-cuat
     CargaInicialDosComponent,
     CargaInicialTresComponent,
     CargaInicialCuatroComponent,
+    TituloComponent,
+    DetalleTituloComponent,
+    MovimientosComponent,
   ],
   providers: [],
   bootstrap: [AppComponent]

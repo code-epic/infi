@@ -21,25 +21,30 @@
 
 
                         <div class="form-row justify-content-md-center mb-1">
-                            <div class="form-group col-md-2">
-                                <label for="">Fecha</label>
-                                <input type="text" ngbDatepicker #d="ngbDatepicker" class="form-control" placeholder="Desde">
+                            <div class="col-xs-12 col-sm-6 col-md-5 col-lg-3">
+                                <form class="form-inline">
+                                    <div class="form-group">
+                                        <div class="input-group">
+                                            <input class="form-control" placeholder="Fecha desde" name="dp" [(ngModel)]="fechaDesde" ngbDatepicker #fd="ngbDatepicker" [placement]="placement" [positionTarget]="buttonEl">
+                                            <div class="input-group-append">
+                                                <button #buttonEl class="btn calendario" (click)="fd.toggle()" type="button"></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
                             </div>
-                            <div class="form-group col-md-2 topIconCalendario top2">
-                                <i class="far fa-calendar-alt " (click)="d.toggle()"></i>
+                            <div class="col-xs-12 col-sm-6 col-md-5 col-lg-3">
+                                <form class="form-inline">
+                                    <div class="form-group">
+                                        <div class="input-group">
+                                            <input class="form-control" placeholder="Fecha hasta" name="dp" [(ngModel)]="fechaHasta" ngbDatepicker #fd="ngbDatepicker" [placement]="placement" [positionTarget]="buttonEl">
+                                            <div class="input-group-append">
+                                                <button #buttonEl class="btn calendario" (click)="fd.toggle()" type="button"></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
                             </div>
-                        </div>
-
-                        <div class="form-row justify-content-md-center  mb-2">
-                            <div class="form-group col-md-2">
-                                <input type="text" ngbDatepicker #c="ngbDatepicker" class="form-control" placeholder="Hasta">
-                            </div>
-                            <div class="form-group col-md-2 topIconCalendario ">
-                                <i class="far fa-calendar-alt " (click)="c.toggle()"></i>
-                            </div>
-                        </div>
-                        <div class="form-row justify-content-md-center  mb-2">
-
                             <div class="row mb-4">
                                 <div class="col-md-12 text-center">
                                     <button type="button" class="btn bg-gradient-red text-white"> ++ Buscar ++<i aria-hidden="true"></i></button>

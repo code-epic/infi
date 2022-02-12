@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { NgbModalConfig, NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { NgbModalConfig, NgbModal, NgbDateStruct } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-salida-titulos',
@@ -7,6 +7,10 @@ import { NgbModalConfig, NgbModal } from '@ng-bootstrap/ng-bootstrap';
   styleUrls: ['./salida-titulos.component.scss']
 })
 export class SalidaTitulosComponent implements OnInit {
+  
+  fechaDesde : NgbDateStruct;
+  fechaHasta : NgbDateStruct;
+  placement = 'bottom';
 
   constructor(config: NgbModalConfig, private modalService: NgbModal) {
     // customize default values of modals used by this component tree

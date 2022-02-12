@@ -39,6 +39,9 @@ import { CargaInicialDosComponent } from 'src/app/views/custodia/carga-inicial-d
 import { CargaInicialTresComponent } from 'src/app/views/custodia/carga-inicial-tres/carga-inicial-tres.component';
 import { CargaInicialCuatroComponent } from 'src/app/views/custodia/carga-inicial-cuatro/carga-inicial-cuatro.component';
 import { EstructuraTarifariaComponent } from 'src/app/views/custodia/estructura-tarifaria/estructura-tarifaria.component';
+import { TituloComponent } from 'src/app/views/custodia/titulo/titulo.component';
+import { DetalleTituloComponent } from 'src/app/views/custodia/detalle-titulo/detalle-titulo.component';
+import { MovimientosComponent } from 'src/app/views/custodia/movimientos/movimientos.component';
 
 export const AdminLayoutRoutes: Routes = [
     { path: 'dashboard', component: DashboardComponent },
@@ -79,5 +82,8 @@ export const AdminLayoutRoutes: Routes = [
     { path:'cargaInicialDos', component:CargaInicialDosComponent},
     { path:'cargaInicialTres', component:CargaInicialTresComponent},
     { path:'cargaInicialCuatro', component:CargaInicialCuatroComponent},
-    { path:'estructuraTarifaria', component:EstructuraTarifariaComponent}
+    { path:'estructuraTarifaria', component:EstructuraTarifariaComponent},
+    { path: 'custodiaTitulo', component:TituloComponent },
+    { path: 'custodiaDetalleTitulo', component:DetalleTituloComponent},
+    { path:'custodiaMovimiento', component: MovimientosComponent} 
 ];

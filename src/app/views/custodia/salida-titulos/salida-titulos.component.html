@@ -32,11 +32,17 @@
                             <div class="form-group col-md-1 top1">
                                 <i class="fas fa-search iconElimi"></i>
                             </div>
-                            <div class="form-group col-md-2">
-                                <input type="text" ngbDatepicker #d="ngbDatepicker" class="form-control" placeholder="Fecha valor">
-                            </div>
-                            <div class="form-group col-md-2 topIconCalendario">
-                                <i class="far fa-calendar-alt " (click)="d.toggle()"></i>
+                            <div class="col-xs-12 col-sm-6 col-md-5 col-lg-3">
+                                <form class="form-inline">
+                                    <div class="form-group">
+                                        <div class="input-group">
+                                            <input class="form-control" placeholder="Fecha valor" name="dp" [(ngModel)]="fechaDesde" ngbDatepicker #fd="ngbDatepicker" [placement]="placement" [positionTarget]="buttonEl">
+                                            <div class="input-group-append">
+                                                <button #buttonEl class="btn calendario" (click)="fd.toggle()" type="button"></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
                             </div>
                         </div>
 
@@ -47,7 +53,7 @@
                         <div class="form-row justify-content-md-center mb-2">
 
 
-                            <button type="submit" class="btn bg-gradient-red text-white">Buscar<i aria-hidden="true"></i></button>
+                            <button type="submit" class="btn bg-gradient-red text-white"> ++ Buscar ++ <i aria-hidden="true"></i></button>
 
 
                         </div>
@@ -62,7 +68,6 @@
                                     <table class="table">
                                         <thead>
                                             <tr>
-                                                <th scope="col"></th>
                                                 <th scope="col">Titulos</th>
                                                 <th scope="col">Cantidad</th>
                                                 <th scope="col">Valor nominal</th>
@@ -76,7 +81,6 @@
                                         </thead>
                                         <tbody>
                                             <tr>
-                                                <td></td>
                                                 <td>Farmatodos</td>
                                                 <td>1000</td>
                                                 <td>1</td>
@@ -109,6 +113,7 @@
       </button>
     </div>
     <div class="modal-body">
+        <h4 class="card-title text-center tituloP">Cliente : Angel Herrera</h4>
         <div class="row top">
             <div class="col-md-12 text-center">
                 <table class="table-responsive">
@@ -119,6 +124,7 @@
                                     <th scope="col">Titulo</th>
                                     <th scope="col">Moneda negociacion</th>
                                     <th scope="col">Cantidad a transferir</th>
+                                    <th scope="col">Depositario</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -126,20 +132,13 @@
                                     <td>BODEN15</td>
                                     <td>USD</td>
                                     <td><input type="number" class="form-control" placeholder="10000"></td>
-                                </tr>
-                            </tbody>
-                            <tbody>
-                                <tr>
+
                                     <td>
-                                        <div class="col-md-12">
-                                            <label for="">Depositario</label>
-                                            <select name="" id="tipoAuditoria" class="form-control">
+                                        <select name="" id="" class="form-control">
                                             <option value="">Empresa depositaria</option>
                                             <option value="">Garantia de la nacion</option>
                                         </select>
-                                        </div>
                                     </td>
-
                                 </tr>
                             </tbody>
                         </table>
@@ -147,6 +146,7 @@
                 </table>
             </div>
         </div>
+        <h4 class="card-title text-center tituloP">Cliente que recibe : Filiperto</h4>
         <div class="row top2">
             <div class="col-md-12">
                 <div class="text-center">

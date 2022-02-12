@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { NgbModalConfig, NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { NgbModalConfig, NgbModal,NgbDateStruct } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-salida-externa',
@@ -7,6 +7,10 @@ import { NgbModalConfig, NgbModal } from '@ng-bootstrap/ng-bootstrap';
   styleUrls: ['./salida-externa.component.scss']
 })
 export class SalidaExternaComponent implements OnInit {
+  
+  fechaDesde : NgbDateStruct;
+  fechaHasta : NgbDateStruct;
+  placement = 'bottom';
 
   constructor(config: NgbModalConfig, private modalService: NgbModal) {
     // customize default values of modals used by this component tree
@@ -14,7 +18,8 @@ export class SalidaExternaComponent implements OnInit {
     config.keyboard = false;
     
   }
-
+  
+  
   ngOnInit(): void {
   }
 
