@@ -47,6 +47,9 @@ import { TituloCustodiaComponent } from 'src/app/views/custodia/titulo-custodia/
 import { CuponesComponent } from 'src/app/views/custodia/cupones/cupones.component';
 import { InformesComponent } from 'src/app/views/custodia/informes/informes.component';
 import { PosicionGlobalComponent } from 'src/app/views/custodia/informes/posicion-global/posicion-global.component';
+import { ListasClientesComponent } from 'src/app/views/custodia/informes/listas-clientes/listas-clientes.component';
+import { ValoresGarantiasComponent } from 'src/app/views/custodia/informes/valores-garantias/valores-garantias.component';
+
 
 export const AdminLayoutRoutes: Routes = [
     { path: 'dashboard', component: DashboardComponent },
@@ -98,5 +101,7 @@ export const AdminLayoutRoutes: Routes = [
     { path:'custodiaMovimiento', component: MovimientosComponent},
     { path:'custodiaCupones', component: CuponesComponent},
     { path:'custodiaInformes', component: InformesComponent},
-    { path:'posicionGlobal', component: PosicionGlobalComponent}
+    { path:'posicionGlobal', component: PosicionGlobalComponent},
+    { path:'listaClientes', component: ListasClientesComponent},
+    { path:'valoresGarantias', component: ValoresGarantiasComponent}
 ];

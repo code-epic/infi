@@ -2,13 +2,14 @@ import { Component, OnInit } from '@angular/core';
 import { NgbDateStruct } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
-  selector: 'app-posicion-global',
-  templateUrl: './posicion-global.component.html',
-  styleUrls: ['./posicion-global.component.scss']
+  selector: 'app-valores-garantias',
+  templateUrl: './valores-garantias.component.html',
+  styleUrls: ['./valores-garantias.component.scss']
 })
-export class PosicionGlobalComponent implements OnInit {
+export class ValoresGarantiasComponent implements OnInit {
   emisionDesde : NgbDateStruct;
   placement = 'bottom';
+  
   constructor() { }
 
   ngOnInit(): void {

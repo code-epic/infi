@@ -56,6 +56,9 @@ import { TituloCustodiaComponent } from './views/custodia/titulo-custodia/titulo
 import { CuponesComponent } from './views/custodia/cupones/cupones.component';
 import { InformesComponent } from './views/custodia/informes/informes.component';
 import { PosicionGlobalComponent } from './views/custodia/informes/posicion-global/posicion-global.component';
+import { ListasClientesComponent } from './views/custodia/informes/listas-clientes/listas-clientes.component';
+import { ValoresGarantiasComponent } from './views/custodia/informes/valores-garantias/valores-garantias.component';
+import { CertificadoBloqueoComponent } from './views/custodia/informes/certificado-bloqueo/certificado-bloqueo.component';
 
 const ngWizardConfig: NgWizardConfig = {
   theme: THEME.arrows
@@ -123,6 +126,9 @@ const ngWizardConfig: NgWizardConfig = {
     CuponesComponent,
     InformesComponent,
     PosicionGlobalComponent,
+    ListasClientesComponent,
+    ValoresGarantiasComponent,
+    CertificadoBloqueoComponent,
   ],
   providers: [],
   bootstrap: [AppComponent]
