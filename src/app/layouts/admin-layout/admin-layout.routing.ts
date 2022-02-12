@@ -42,6 +42,8 @@ import { EstructuraTarifariaComponent } from 'src/app/views/custodia/estructura-
 import { TituloComponent } from 'src/app/views/custodia/titulo/titulo.component';
 import { DetalleTituloComponent } from 'src/app/views/custodia/detalle-titulo/detalle-titulo.component';
 import { MovimientosComponent } from 'src/app/views/custodia/movimientos/movimientos.component';
+import { ClienteTituloCustodiaComponent } from 'src/app/views/custodia/cliente-titulo-custodia/cliente-titulo-custodia.component';
+import { TituloCustodiaComponent } from 'src/app/views/custodia/titulo-custodia/titulo-custodia.component';
 import { CuponesComponent } from 'src/app/views/custodia/cupones/cupones.component';
 import { InformesComponent } from 'src/app/views/custodia/informes/informes.component';
 import { PosicionGlobalComponent } from 'src/app/views/custodia/informes/posicion-global/posicion-global.component';
@@ -86,6 +88,11 @@ export const AdminLayoutRoutes: Routes = [
     { path:'cargaInicialTres', component:CargaInicialTresComponent},
     { path:'cargaInicialCuatro', component:CargaInicialCuatroComponent},
     { path:'estructuraTarifaria', component:EstructuraTarifariaComponent},
+    { path:'custodiaTitulo', component:TituloComponent },
+    { path:'custodiaDetalleTitulo', component:DetalleTituloComponent},
+    { path:'custodiaMovimiento', component: MovimientosComponent},
+    { path:'custodiaTituloCustodia', component: ClienteTituloCustodiaComponent},
+    { path:'tituloCustodia', component: TituloCustodiaComponent},
     { path: 'custodiaTitulo', component:TituloComponent },
     { path: 'custodiaDetalleTitulo', component:DetalleTituloComponent},
     { path:'custodiaMovimiento', component: MovimientosComponent},
