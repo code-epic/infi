@@ -3,13 +3,11 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
-
 import { AppComponent } from './app.component';
 import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
 import { AuthLayoutComponent } from './layouts/auth-layout/auth-layout.component';
-
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-
+import { NgWizardModule, NgWizardConfig, THEME } from 'ng-wizard';
 import { AppRoutingModule } from './app.routing';
 import { ComponentsModule } from './components/components.module';
 import { ConfiguracionComponent } from './views/configuracion/configuracion.component';
@@ -55,6 +53,13 @@ import { DetalleTituloComponent } from './views/custodia/detalle-titulo/detalle-
 import { MovimientosComponent } from './views/custodia/movimientos/movimientos.component';
 import { ClienteTituloCustodiaComponent } from './views/custodia/cliente-titulo-custodia/cliente-titulo-custodia.component';
 import { TituloCustodiaComponent } from './views/custodia/titulo-custodia/titulo-custodia.component';
+import { CuponesComponent } from './views/custodia/cupones/cupones.component';
+import { InformesComponent } from './views/custodia/informes/informes.component';
+import { PosicionGlobalComponent } from './views/custodia/informes/posicion-global/posicion-global.component';
+
+const ngWizardConfig: NgWizardConfig = {
+  theme: THEME.arrows
+};
 
 @NgModule({
   imports: [
@@ -64,7 +69,8 @@ import { TituloCustodiaComponent } from './views/custodia/titulo-custodia/titulo
     ComponentsModule,
     NgbModule,
     RouterModule,
-    AppRoutingModule
+    AppRoutingModule,
+    NgWizardModule.forRoot(ngWizardConfig)
 
   ],
   declarations: [
@@ -114,6 +120,9 @@ import { TituloCustodiaComponent } from './views/custodia/titulo-custodia/titulo
     MovimientosComponent,
     ClienteTituloCustodiaComponent,
     TituloCustodiaComponent,
+    CuponesComponent,
+    InformesComponent,
+    PosicionGlobalComponent,
   ],
   providers: [],
   bootstrap: [AppComponent]
