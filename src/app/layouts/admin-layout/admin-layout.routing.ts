@@ -42,6 +42,7 @@ import { EstructuraTarifariaComponent } from 'src/app/views/custodia/estructura-
 import { TituloComponent } from 'src/app/views/custodia/titulo/titulo.component';
 import { DetalleTituloComponent } from 'src/app/views/custodia/detalle-titulo/detalle-titulo.component';
 import { MovimientosComponent } from 'src/app/views/custodia/movimientos/movimientos.component';
+import { CuponesComponent } from 'src/app/views/custodia/cupones/cupones.component';
 
 export const AdminLayoutRoutes: Routes = [
     { path: 'dashboard', component: DashboardComponent },
@@ -85,5 +86,6 @@ export const AdminLayoutRoutes: Routes = [
     { path:'estructuraTarifaria', component:EstructuraTarifariaComponent},
     { path: 'custodiaTitulo', component:TituloComponent },
     { path: 'custodiaDetalleTitulo', component:DetalleTituloComponent},
-    { path:'custodiaMovimiento', component: MovimientosComponent} 
+    { path:'custodiaMovimiento', component: MovimientosComponent},
+    { path:'custodiaCupones', component: CuponesComponent} 
 ];
