@@ -7,9 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CuponesComponent implements OnInit {
 
+  public visible : boolean = false;
+  
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  buscarCliente():void{
+    this.visible = !this.visible
   }
 
 }

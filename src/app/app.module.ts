@@ -55,7 +55,7 @@ import { MovimientosComponent } from './views/custodia/movimientos/movimientos.c
 import { CuponesComponent } from './views/custodia/cupones/cupones.component';
 
 const ngWizardConfig: NgWizardConfig = {
-  theme: THEME.circles
+  theme: THEME.arrows
 };
 
 @NgModule({
