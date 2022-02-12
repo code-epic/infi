@@ -28,6 +28,17 @@ import { TransaccionesfijasComponent } from 'src/app/views/configuracion/transac
 import { UsuariosespecialesComponent } from 'src/app/views/configuracion/usuariosespeciales/usuariosespeciales.component';
 import { OficinasComercialesComponent } from 'src/app/views/configuracion/oficinas-comerciales/oficinas-comerciales.component';
 import { TransaccionComponent } from 'src/app/views/custodia/transaccion/transaccion.component';
+import { SalidaTitulosComponent } from 'src/app/views/custodia/salida-titulos/salida-titulos.component';
+import { SalidaExternaComponent } from 'src/app/views/custodia/salida-externa/salida-externa.component';
+import { EntradaTituloComponent } from 'src/app/views/custodia/entrada-titulo/entrada-titulo.component';
+import { GeneracionCuponesComponent } from 'src/app/views/custodia/generacion-cupones/generacion-cupones.component';
+import { GeneracionComisionComponent } from 'src/app/views/custodia/generacion-comision/generacion-comision.component';
+import { ConsultaEventosComponent } from 'src/app/views/custodia/consulta-eventos/consulta-eventos.component';
+import { CargaInicialComponent } from 'src/app/views/custodia/carga-inicial/carga-inicial.component';
+import { CargaInicialDosComponent } from 'src/app/views/custodia/carga-inicial-dos/carga-inicial-dos.component';
+import { CargaInicialTresComponent } from 'src/app/views/custodia/carga-inicial-tres/carga-inicial-tres.component';
+import { CargaInicialCuatroComponent } from 'src/app/views/custodia/carga-inicial-cuatro/carga-inicial-cuatro.component';
+import { EstructuraTarifariaComponent } from 'src/app/views/custodia/estructura-tarifaria/estructura-tarifaria.component';
 import { TituloComponent } from 'src/app/views/custodia/titulo/titulo.component';
 import { DetalleTituloComponent } from 'src/app/views/custodia/detalle-titulo/detalle-titulo.component';
 import { MovimientosComponent } from 'src/app/views/custodia/movimientos/movimientos.component';
@@ -61,6 +72,17 @@ export const AdminLayoutRoutes: Routes = [
     { path: 'usuariosespeciales', component: UsuariosespecialesComponent},
     { path:'oficinasComerciales', component:OficinasComercialesComponent},
     { path:'transaccion', component:TransaccionComponent},
+    { path:'salidaTitulos', component:SalidaTitulosComponent},
+    { path:'salidaExterna', component:SalidaExternaComponent},
+    { path:'entradaTitulos', component:EntradaTituloComponent},
+    { path:'generacionCupones', component:GeneracionCuponesComponent},
+    { path:'generacionComision', component:GeneracionComisionComponent},
+    { path:'consultaEventos', component:ConsultaEventosComponent},
+    { path:'cargaInicial', component:CargaInicialComponent},
+    { path:'cargaInicialDos', component:CargaInicialDosComponent},
+    { path:'cargaInicialTres', component:CargaInicialTresComponent},
+    { path:'cargaInicialCuatro', component:CargaInicialCuatroComponent},
+    { path:'estructuraTarifaria', component:EstructuraTarifariaComponent},
     { path: 'custodiaTitulo', component:TituloComponent },
     { path: 'custodiaDetalleTitulo', component:DetalleTituloComponent},
     { path:'custodiaMovimiento', component: MovimientosComponent} 

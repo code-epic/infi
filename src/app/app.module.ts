@@ -39,6 +39,17 @@ import { TransaccionesfijasComponent } from './views/configuracion/transacciones
 import { UsuariosespecialesComponent } from './views/configuracion/usuariosespeciales/usuariosespeciales.component';
 import { OficinasComercialesComponent } from './views/configuracion/oficinas-comerciales/oficinas-comerciales.component';
 import { TransaccionComponent } from './views/custodia/transaccion/transaccion.component';
+import { SalidaTitulosComponent } from './views/custodia/salida-titulos/salida-titulos.component';
+import { SalidaExternaComponent } from './views/custodia/salida-externa/salida-externa.component';
+import { EntradaTituloComponent } from './views/custodia/entrada-titulo/entrada-titulo.component';
+import { GeneracionCuponesComponent } from './views/custodia/generacion-cupones/generacion-cupones.component';
+import { GeneracionComisionComponent } from './views/custodia/generacion-comision/generacion-comision.component';
+import { ConsultaEventosComponent } from './views/custodia/consulta-eventos/consulta-eventos.component';
+import { EstructuraTarifariaComponent } from './views/custodia/estructura-tarifaria/estructura-tarifaria.component';
+import { CargaInicialComponent } from './views/custodia/carga-inicial/carga-inicial.component';
+import { CargaInicialDosComponent } from './views/custodia/carga-inicial-dos/carga-inicial-dos.component';
+import { CargaInicialTresComponent } from './views/custodia/carga-inicial-tres/carga-inicial-tres.component';
+import { CargaInicialCuatroComponent } from './views/custodia/carga-inicial-cuatro/carga-inicial-cuatro.component';
 import { TituloComponent } from './views/custodia/titulo/titulo.component';
 import { DetalleTituloComponent } from './views/custodia/detalle-titulo/detalle-titulo.component';
 import { MovimientosComponent } from './views/custodia/movimientos/movimientos.component';
@@ -85,9 +96,20 @@ import { MovimientosComponent } from './views/custodia/movimientos/movimientos.c
     UsuariosespecialesComponent,
     OficinasComercialesComponent,
     TransaccionComponent,
+    SalidaTitulosComponent,
+    SalidaExternaComponent,
+    EntradaTituloComponent,
+    GeneracionCuponesComponent,
+    GeneracionComisionComponent,
+    ConsultaEventosComponent,
+    EstructuraTarifariaComponent,
+    CargaInicialComponent,
+    CargaInicialDosComponent,
+    CargaInicialTresComponent,
+    CargaInicialCuatroComponent,
     TituloComponent,
     DetalleTituloComponent,
-    MovimientosComponent
+    MovimientosComponent,
   ],
   providers: [],
   bootstrap: [AppComponent]
