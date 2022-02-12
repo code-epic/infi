@@ -43,6 +43,8 @@ import { TituloComponent } from 'src/app/views/custodia/titulo/titulo.component'
 import { DetalleTituloComponent } from 'src/app/views/custodia/detalle-titulo/detalle-titulo.component';
 import { MovimientosComponent } from 'src/app/views/custodia/movimientos/movimientos.component';
 import { CuponesComponent } from 'src/app/views/custodia/cupones/cupones.component';
+import { InformesComponent } from 'src/app/views/custodia/informes/informes.component';
+import { PosicionGlobalComponent } from 'src/app/views/custodia/informes/posicion-global/posicion-global.component';
 
 export const AdminLayoutRoutes: Routes = [
     { path: 'dashboard', component: DashboardComponent },
@@ -87,5 +89,7 @@ export const AdminLayoutRoutes: Routes = [
     { path: 'custodiaTitulo', component:TituloComponent },
     { path: 'custodiaDetalleTitulo', component:DetalleTituloComponent},
     { path:'custodiaMovimiento', component: MovimientosComponent},
-    { path:'custodiaCupones', component: CuponesComponent} 
+    { path:'custodiaCupones', component: CuponesComponent},
+    { path:'custodiaInformes', component: InformesComponent},
+    { path:'posicionGlobal', component: PosicionGlobalComponent}
 ];

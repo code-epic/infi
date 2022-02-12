@@ -53,6 +53,8 @@ import { TituloComponent } from './views/custodia/titulo/titulo.component';
 import { DetalleTituloComponent } from './views/custodia/detalle-titulo/detalle-titulo.component';
 import { MovimientosComponent } from './views/custodia/movimientos/movimientos.component';
 import { CuponesComponent } from './views/custodia/cupones/cupones.component';
+import { InformesComponent } from './views/custodia/informes/informes.component';
+import { PosicionGlobalComponent } from './views/custodia/informes/posicion-global/posicion-global.component';
 
 const ngWizardConfig: NgWizardConfig = {
   theme: THEME.arrows
@@ -116,6 +118,8 @@ const ngWizardConfig: NgWizardConfig = {
     DetalleTituloComponent,
     MovimientosComponent,
     CuponesComponent,
+    InformesComponent,
+    PosicionGlobalComponent,
   ],
   providers: [],
   bootstrap: [AppComponent]
