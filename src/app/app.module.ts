@@ -59,6 +59,12 @@ import { PosicionGlobalComponent } from './views/custodia/informes/posicion-glob
 import { ListasClientesComponent } from './views/custodia/informes/listas-clientes/listas-clientes.component';
 import { ValoresGarantiasComponent } from './views/custodia/informes/valores-garantias/valores-garantias.component';
 import { CertificadoBloqueoComponent } from './views/custodia/informes/certificado-bloqueo/certificado-bloqueo.component';
+import { CertificadosRecibosComponent } from './views/custodia/informes/certificados-recibos/certificados-recibos.component';
+import { PagoChequesComponent } from './views/custodia/informes/pago-cheques/pago-cheques.component';
+import { AvisoCobroComponent } from './views/custodia/informes/aviso-cobro/aviso-cobro.component';
+import { TitulosBloqueosComponent } from './views/custodia/informes/titulos-bloqueos/titulos-bloqueos.component';
+import { TransaccionesLiquidadasComponent } from './views/custodia/informes/transacciones-liquidadas/transacciones-liquidadas.component';
+import { VencimientoInteresesComponent } from './views/custodia/informes/vencimiento-intereses/vencimiento-intereses.component';
 
 const ngWizardConfig: NgWizardConfig = {
   theme: THEME.arrows
@@ -129,6 +135,12 @@ const ngWizardConfig: NgWizardConfig = {
     ListasClientesComponent,
     ValoresGarantiasComponent,
     CertificadoBloqueoComponent,
+    CertificadosRecibosComponent,
+    PagoChequesComponent,
+    AvisoCobroComponent,
+    TitulosBloqueosComponent,
+    TransaccionesLiquidadasComponent,
+    VencimientoInteresesComponent,
   ],
   providers: [],
   bootstrap: [AppComponent]

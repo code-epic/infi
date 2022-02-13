@@ -49,7 +49,13 @@ import { InformesComponent } from 'src/app/views/custodia/informes/informes.comp
 import { PosicionGlobalComponent } from 'src/app/views/custodia/informes/posicion-global/posicion-global.component';
 import { ListasClientesComponent } from 'src/app/views/custodia/informes/listas-clientes/listas-clientes.component';
 import { ValoresGarantiasComponent } from 'src/app/views/custodia/informes/valores-garantias/valores-garantias.component';
-
+import { CertificadoBloqueoComponent } from 'src/app/views/custodia/informes/certificado-bloqueo/certificado-bloqueo.component';
+import { CertificadosRecibosComponent } from 'src/app/views/custodia/informes/certificados-recibos/certificados-recibos.component';
+import { PagoChequesComponent } from 'src/app/views/custodia/informes/pago-cheques/pago-cheques.component';
+import { AvisoCobroComponent } from 'src/app/views/custodia/informes/aviso-cobro/aviso-cobro.component';
+import { TitulosBloqueosComponent } from 'src/app/views/custodia/informes/titulos-bloqueos/titulos-bloqueos.component';
+import { TransaccionesLiquidadasComponent } from 'src/app/views/custodia/informes/transacciones-liquidadas/transacciones-liquidadas.component';
+import { VencimientoInteresesComponent } from 'src/app/views/custodia/informes/vencimiento-intereses/vencimiento-intereses.component';
 
 export const AdminLayoutRoutes: Routes = [
     { path: 'dashboard', component: DashboardComponent },
@@ -103,5 +109,12 @@ export const AdminLayoutRoutes: Routes = [
     { path:'custodiaInformes', component: InformesComponent},
     { path:'posicionGlobal', component: PosicionGlobalComponent},
     { path:'listaClientes', component: ListasClientesComponent},
-    { path:'valoresGarantias', component: ValoresGarantiasComponent}
+    { path:'valoresGarantias', component: ValoresGarantiasComponent},
+    { path:'certificadoBloqueo', component:CertificadoBloqueoComponent },
+    { path:'certificadoRecibido', component:CertificadosRecibosComponent},
+    { path:'pagoCheques', component:PagoChequesComponent},
+    { path:'avisoCobro', component:AvisoCobroComponent},
+    { path:'titulosBloqueos', component:TitulosBloqueosComponent},
+    { path:'transaccionLiquidadas', component:TransaccionesLiquidadasComponent},
+    { path:'vencimientoInteres', component:VencimientoInteresesComponent}
 ];
