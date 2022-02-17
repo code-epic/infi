@@ -33,4 +33,7 @@ export class TransaccionesfijasComponent implements OnInit {
     this.meridian = !this.meridian;
 }
 
+
+
 }
+

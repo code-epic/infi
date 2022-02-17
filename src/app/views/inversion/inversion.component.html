@@ -12,43 +12,150 @@
             <div class="row align-items-center">
               <div class="col">
                 <h6 class="text-uppercase text-muted ls-1 mb-1">Configuración</h6>
-                <h2 class="mb-0">Fecha Valor</h2>
+                <h2 class="mb-0">Unidad de Inversión</h2>
               </div>
             </div>
           </div>
           <div class="card-body">
-            <ng-wizard [config]="config" (stepChanged)="stepChanged($event)">
+            <form>
+              <div class="form-row">
+                <div class="form-group col-md-4">
+                  <label for="inputEmail4">Unidad de Inversión</label>                    
+                  <input type="text" class="form-control" id="numCuenta">
+                </div>
+                <div class="form-group col-md-4">
+                  <label for="nombre">Emisor</label>
+                  <select name="" id="tipoCliente" class="form-control">
+                    <option value="">Seleccione</option>
+                    <option value="P">Persona</option>
+                    <option value="E">Empresa</option>
+                  </select>
+                </div>
+                <div class="form-group col-md-4">
+                  <label for="nombre">Tipo de Instrumento</label>
+                  <select name="" id="tipoCliente" class="form-control">
+                    <option value="">Seleccione</option>
+                    <option value="P">Persona</option>
+                    <option value="E">Empresa</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group col-md-4">
+                  <label for="fechaDesde">Fecha Desde</label>                    
+                  <input type="date" class="form-control" id="numCuenta">
+                </div>
+                <div class="form-group col-md-4">
+                  <label for="fechaHasta">Fecha Hasta</label>                    
+                  <input type="date" class="form-control" id="numCuenta">
+                </div>
+                <div class="form-group col-md-4">
+                  <label for="nombre">Status</label>
+                  <select name="" id="status" class="form-control">
+                    <option value="">Seleccione</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="row">                   
+                  <div class="col-md-12 mb-4">
+                      <div class="text-right">
+                          <button type="submit" class="btn bg-gradient-red text-white">Buscar <i class="fa fa-search"></i></button>
+                      </div>                           
+                  </div>                   
+              </div>                               
+          </form>
+
+          <div class="card shadow">
+            <div class="row top">
+                <div class="col-md-12 text-center">
+                    <table class="table-responsive">
+                        <div class="table-responsive-sm table-bordered">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Unidad de<br>Inversión</th>
+                                        <th scope="col">Tipo de<br>Instrumento</th>
+                                        <th scope="col">Emisor</th>
+                                        <th scope="col">Fecha de<br>Emisión</th>
+                                        <th scope="col">Fecha de<br>Liquidación</th>
+                                        <th scope="col">Fecha de<br>Cierre</th>
+                                        <th scope="col">Estatus</th>
+                                        <th scope="col">Acción</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Papeles Comerciales Nelson</td>
+                                        <td>Bonos Subasta_C</td>
+                                        <td>Banco Central de Venezuela</td>
+                                        <td>10-07-2008</td>
+                                        <td>10-07-2008</td>
+                                        <td>10-07-2008</td>
+                                        <td>Registrada</td>
+                                        <td>
+                                            <i class="fas fa-edit iconEdit"></i>                             
+                                        </td>    
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+
+            <!-- <ng-wizard [config]="config" (stepChanged)="stepChanged($event)">
   
-                <ng-wizard-step [title]="'Step 1'" [description]="'Step 1 description'"
-                  [canEnter]="isValidTypeBoolean" [canExit]="isValidFunctionReturnsBoolean.bind(this)">
-                  <span>Step 1 content</span>
+                <ng-wizard-step [title]="'Paso 1'" [description]="'Unidad de Inversión'"
+                  [canEnter]="isValidTypeBoolean" [canExit]="">
+                  <span><div class="row top">
+                    <div class="col-md-12 text-center">
+                        <table class="table table-striped">
+                            <thead>
+                            <tr>
+                              <th scope="col">Nombre Valor</th>
+                              <th scope="col">Fecha Valor</th>
+                              <th scope="col">Acción</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                              <td>VENTA DE TITULOS</td>
+                              <td>02-02-2022</td>      
+                              <td>
+                                <i class="fas fa-edit iconEdit"></i>
+                                <i class="far fa-trash-alt iconElimi"></i>                            
+                              </td>
+                            </tr>
+                            </tbody>
+                          </table>
+                    </div>
+                </div></span>
                 </ng-wizard-step>
                 
-                <ng-wizard-step [title]="'Step 2'" [description]="'Step 2 description'" [state]="stepStates.disabled">
+                <ng-wizard-step [title]="'Paso 2'" [description]="'Títulos'">
                   <span>Step 2 content</span>
                 </ng-wizard-step>
                 
-                <ng-wizard-step [title]="'Step 3'" [description]="'Step 3 description'"
-                  [canEnter]="isValidFunctionReturnsObservable.bind(this)" [canExit]="isValidFunctionReturnsBoolean.bind(this)">
+                <ng-wizard-step [title]="'Paso 3'" [description]="'Blotters'"
+                  [canEnter]="" [canExit]="">
                   <span>Step 3 content</span>
                 </ng-wizard-step>
               
-              <ng-wizard-step [title]="'Step 4'" [description]="'Step 4 description'">
+              <ng-wizard-step [title]="'Paso 4'" [description]="'Indicadores'">
                   <span>Step 4 content</span>
                 </ng-wizard-step>
               
-                <ng-wizard-step [title]="'Step 5'" [description]="'Step 5 description'" [state]="stepStates.hidden">
+                <ng-wizard-step [title]="'Paso 5'" [description]="'Empresas'">
                   <span>Step 5 content</span>
                 </ng-wizard-step>
                 
-                <ng-wizard-step [title]="'Step 6'" [description]="'Step 6 description'" [state]="stepStates.error">
+                <ng-wizard-step [title]="'Paso 6'" [description]="'Campos Dinámicos'">
                   <span>Step 6 content</span>
                 </ng-wizard-step>
-                
-                <ng-wizard-step [title]="'Step 7'" [description]="'Step 7 description'">
-                  <span>Step 7 content</span>
-                </ng-wizard-step>
-            </ng-wizard>
+            </ng-wizard> -->
 
           </div>
         </div>

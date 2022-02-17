@@ -18,7 +18,7 @@ export class InversionComponent implements OnInit {
 
   config: NgWizardConfig = {
     selected: 0,
-    theme: THEME.arrows,
+    theme: THEME.circles,
     toolbarSettings: {
       toolbarExtraButtons: [
         { text: 'Finish', class: 'btn btn-info', event: () => { alert("Finished!!!"); } }
@@ -63,3 +63,5 @@ export class InversionComponent implements OnInit {
   }
 
 }
+
+
