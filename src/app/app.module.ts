@@ -8,7 +8,6 @@ import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.compon
 import { AuthLayoutComponent } from './layouts/auth-layout/auth-layout.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { NgWizardModule, NgWizardConfig, THEME } from 'ng-wizard';
-
 import { AppRoutingModule } from './app.routing';
 import { ComponentsModule } from './components/components.module';
 import { ConfiguracionComponent } from './views/configuracion/configuracion.component';
@@ -52,9 +51,23 @@ import { CargaInicialCuatroComponent } from './views/custodia/carga-inicial-cuat
 import { TituloComponent } from './views/custodia/titulo/titulo.component';
 import { DetalleTituloComponent } from './views/custodia/detalle-titulo/detalle-titulo.component';
 import { MovimientosComponent } from './views/custodia/movimientos/movimientos.component';
+import { ClienteTituloCustodiaComponent } from './views/custodia/cliente-titulo-custodia/cliente-titulo-custodia.component';
+import { TituloCustodiaComponent } from './views/custodia/titulo-custodia/titulo-custodia.component';
+import { CuponesComponent } from './views/custodia/cupones/cupones.component';
+import { InformesComponent } from './views/custodia/informes/informes.component';
+import { PosicionGlobalComponent } from './views/custodia/informes/posicion-global/posicion-global.component';
+import { ListasClientesComponent } from './views/custodia/informes/listas-clientes/listas-clientes.component';
+import { ValoresGarantiasComponent } from './views/custodia/informes/valores-garantias/valores-garantias.component';
+import { CertificadoBloqueoComponent } from './views/custodia/informes/certificado-bloqueo/certificado-bloqueo.component';
+import { CertificadosRecibosComponent } from './views/custodia/informes/certificados-recibos/certificados-recibos.component';
+import { PagoChequesComponent } from './views/custodia/informes/pago-cheques/pago-cheques.component';
+import { AvisoCobroComponent } from './views/custodia/informes/aviso-cobro/aviso-cobro.component';
+import { TitulosBloqueosComponent } from './views/custodia/informes/titulos-bloqueos/titulos-bloqueos.component';
+import { TransaccionesLiquidadasComponent } from './views/custodia/informes/transacciones-liquidadas/transacciones-liquidadas.component';
+import { VencimientoInteresesComponent } from './views/custodia/informes/vencimiento-intereses/vencimiento-intereses.component';
 
 const ngWizardConfig: NgWizardConfig = {
-  theme: THEME.circles
+  theme: THEME.arrows
 };
 
 @NgModule({
@@ -114,6 +127,20 @@ const ngWizardConfig: NgWizardConfig = {
     TituloComponent,
     DetalleTituloComponent,
     MovimientosComponent,
+    ClienteTituloCustodiaComponent,
+    TituloCustodiaComponent,
+    CuponesComponent,
+    InformesComponent,
+    PosicionGlobalComponent,
+    ListasClientesComponent,
+    ValoresGarantiasComponent,
+    CertificadoBloqueoComponent,
+    CertificadosRecibosComponent,
+    PagoChequesComponent,
+    AvisoCobroComponent,
+    TitulosBloqueosComponent,
+    TransaccionesLiquidadasComponent,
+    VencimientoInteresesComponent,
   ],
   providers: [],
   bootstrap: [AppComponent]
