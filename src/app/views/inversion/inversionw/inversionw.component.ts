@@ -3,11 +3,11 @@ import { of } from 'rxjs';
 import { NgWizardConfig, NgWizardService, StepChangedArgs, StepValidationArgs, STEP_STATE, THEME } from 'ng-wizard';
 
 @Component({
-  selector: 'app-inversion',
-  templateUrl: './inversion.component.html',
-  styleUrls: ['./inversion.component.scss']
+  selector: 'app-inversionw',
+  templateUrl: './inversionw.component.html',
+  styleUrls: ['./inversionw.component.scss']
 })
-export class InversionComponent implements OnInit {
+export class InversionwComponent implements OnInit {
 
   stepStates = {
     normal: STEP_STATE.normal,
@@ -20,13 +20,13 @@ export class InversionComponent implements OnInit {
     selected: 0,
     theme: THEME.circles,
     lang: {
-      next: 'Siguiente', 
-      previous: 'Anterior'
+      next: 'Anterior', 
+      previous: 'Siguiente'
     },
-
     toolbarSettings: {
       toolbarExtraButtons: [
-        { text: 'Guardar', class: 'btn btn-succes', event: () => { alert("Finished!!!"); } }
+        
+        { text: 'Guardar', class: 'btn bg-gradient-red text-white', event: () => { alert("Registro Guardado!!!"); } }
       ],
     }
   };
@@ -68,5 +68,3 @@ export class InversionComponent implements OnInit {
   }
 
 }
-
-

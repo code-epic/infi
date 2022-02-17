@@ -56,6 +56,7 @@ import { AvisoCobroComponent } from 'src/app/views/custodia/informes/aviso-cobro
 import { TitulosBloqueosComponent } from 'src/app/views/custodia/informes/titulos-bloqueos/titulos-bloqueos.component';
 import { TransaccionesLiquidadasComponent } from 'src/app/views/custodia/informes/transacciones-liquidadas/transacciones-liquidadas.component';
 import { VencimientoInteresesComponent } from 'src/app/views/custodia/informes/vencimiento-intereses/vencimiento-intereses.component';
+import { InversionwComponent } from 'src/app/views/inversion/inversionw/inversionw.component';
 
 export const AdminLayoutRoutes: Routes = [
     { path: 'dashboard', component: DashboardComponent },
@@ -116,5 +117,6 @@ export const AdminLayoutRoutes: Routes = [
     { path:'avisoCobro', component:AvisoCobroComponent},
     { path:'titulosBloqueos', component:TitulosBloqueosComponent},
     { path:'transaccionLiquidadas', component:TransaccionesLiquidadasComponent},
-    { path:'vencimientoInteres', component:VencimientoInteresesComponent}
+    { path:'vencimientoInteres', component:VencimientoInteresesComponent},
+    { path:'inversionw', component:InversionwComponent}
 ];

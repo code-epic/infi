@@ -65,6 +65,7 @@ import { AvisoCobroComponent } from './views/custodia/informes/aviso-cobro/aviso
 import { TitulosBloqueosComponent } from './views/custodia/informes/titulos-bloqueos/titulos-bloqueos.component';
 import { TransaccionesLiquidadasComponent } from './views/custodia/informes/transacciones-liquidadas/transacciones-liquidadas.component';
 import { VencimientoInteresesComponent } from './views/custodia/informes/vencimiento-intereses/vencimiento-intereses.component';
+import { InversionwComponent } from './views/inversion/inversionw/inversionw.component';
 
 const ngWizardConfig: NgWizardConfig = {
   theme: THEME.arrows
@@ -141,6 +142,7 @@ const ngWizardConfig: NgWizardConfig = {
     TitulosBloqueosComponent,
     TransaccionesLiquidadasComponent,
     VencimientoInteresesComponent,
+    InversionwComponent,
   ],
   providers: [],
   bootstrap: [AppComponent]
