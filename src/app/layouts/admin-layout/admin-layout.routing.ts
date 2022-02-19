@@ -57,6 +57,9 @@ import { TitulosBloqueosComponent } from 'src/app/views/custodia/informes/titulo
 import { TransaccionesLiquidadasComponent } from 'src/app/views/custodia/informes/transacciones-liquidadas/transacciones-liquidadas.component';
 import { VencimientoInteresesComponent } from 'src/app/views/custodia/informes/vencimiento-intereses/vencimiento-intereses.component';
 import { InversionwComponent } from 'src/app/views/inversion/inversionw/inversionw.component';
+import { GeneracionDatosOpicsComponent } from 'src/app/views/utilitarios/generacion-datos-opics/generacion-datos-opics.component';
+import { ProgramadorTareasComponent } from 'src/app/views/utilitarios/programador-tareas/programador-tareas.component';
+import { SesionesComponent } from 'src/app/views/utilitarios/sesiones/sesiones.component';
 
 export const AdminLayoutRoutes: Routes = [
     { path: 'dashboard', component: DashboardComponent },
@@ -118,5 +121,9 @@ export const AdminLayoutRoutes: Routes = [
     { path:'titulosBloqueos', component:TitulosBloqueosComponent},
     { path:'transaccionLiquidadas', component:TransaccionesLiquidadasComponent},
     { path:'vencimientoInteres', component:VencimientoInteresesComponent},
-    { path:'inversionw', component:InversionwComponent}
+    { path:'inversionw', component:InversionwComponent},
+    { path:'generacionOpics', component:GeneracionDatosOpicsComponent},
+    { path:'programadorTarea', component:ProgramadorTareasComponent},
+    { path:'sesiones', component:SesionesComponent}
+    
 ];

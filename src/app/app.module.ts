@@ -66,6 +66,9 @@ import { TitulosBloqueosComponent } from './views/custodia/informes/titulos-bloq
 import { TransaccionesLiquidadasComponent } from './views/custodia/informes/transacciones-liquidadas/transacciones-liquidadas.component';
 import { VencimientoInteresesComponent } from './views/custodia/informes/vencimiento-intereses/vencimiento-intereses.component';
 import { InversionwComponent } from './views/inversion/inversionw/inversionw.component';
+import { GeneracionDatosOpicsComponent } from './views/utilitarios/generacion-datos-opics/generacion-datos-opics.component';
+import { ProgramadorTareasComponent } from './views/utilitarios/programador-tareas/programador-tareas.component';
+import { SesionesComponent } from './views/utilitarios/sesiones/sesiones.component';
 
 const ngWizardConfig: NgWizardConfig = {
   theme: THEME.arrows
@@ -143,6 +146,9 @@ const ngWizardConfig: NgWizardConfig = {
     TransaccionesLiquidadasComponent,
     VencimientoInteresesComponent,
     InversionwComponent,
+    GeneracionDatosOpicsComponent,
+    ProgramadorTareasComponent,
+    SesionesComponent,
   ],
   providers: [],
   bootstrap: [AppComponent]
