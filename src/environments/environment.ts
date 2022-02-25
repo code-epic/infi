@@ -4,7 +4,9 @@
 
 export const environment = {
   production: false,
-  Url: 'https://localhost:2286/v1/api/'
+  Url: 'http://localhost:8012',
+  API: '/devel/api/',
+  Hash: ':c521f27fb1b3311d686d511b668e5bd4'
 };
 
 /*

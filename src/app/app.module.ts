@@ -69,6 +69,16 @@ import { InversionwComponent } from './views/inversion/inversionw/inversionw.com
 import { GeneracionDatosOpicsComponent } from './views/utilitarios/generacion-datos-opics/generacion-datos-opics.component';
 import { ProgramadorTareasComponent } from './views/utilitarios/programador-tareas/programador-tareas.component';
 import { SesionesComponent } from './views/utilitarios/sesiones/sesiones.component';
+import { TabsModule } from 'ngx-bootstrap/tabs';
+import { MatTabsModule } from '@angular/material/tabs';
+import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
+import { MatExpansionModule } from '@angular/material/expansion';
+import { MatCheckboxModule } from '@angular/material/checkbox'
+import { MatListModule } from '@angular/material/list'
+import { MatPaginatorModule } from '@angular/material/paginator';
+
+
 
 const ngWizardConfig: NgWizardConfig = {
   theme: THEME.arrows
@@ -83,6 +93,14 @@ const ngWizardConfig: NgWizardConfig = {
     NgbModule,
     RouterModule,
     AppRoutingModule,
+    TabsModule.forRoot(),
+    MatTabsModule,
+    MatButtonModule,
+    MatIconModule,
+    MatCheckboxModule,
+    MatExpansionModule,
+    MatListModule,
+    MatPaginatorModule,
     NgWizardModule.forRoot(ngWizardConfig)
 
   ],
