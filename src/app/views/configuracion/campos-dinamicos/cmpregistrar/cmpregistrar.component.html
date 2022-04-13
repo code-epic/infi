@@ -1,0 +1,62 @@
+<br><br>
+<h4 class="titulo">REGISTRAR CAMPOS DINAMICOS</h4>
+<hr style="margin-top:1rem">
+<form >
+
+    <div class="row">
+        <div class="col-md-4 form-group">
+            <label >Nombre</label>
+            <input  [ngModelOptions]="{standalone: true}"
+            [(ngModel)]="Dinamico.nombre" value="{{Dinamico.nombre}}" type="text" class="form-control">
+        </div>
+        <div class="col-md-8 form-group">
+            <label >Descripcion</label>
+            <input  [ngModelOptions]="{standalone: true}"
+            [(ngModel)]="Dinamico.descripcion" value="{{Dinamico.descripcion}}" type="text" class="form-control">
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="col-md-6 form-group">
+            <label >Clasificación</label>
+            <select  [ngModelOptions]="{standalone: true}"
+            [(ngModel)]="Dinamico.clasificacion" value="{{Dinamico.clasificacion}}" class="form-control">
+                <option value="0">SELECCIONE</option>
+                <option value="RESTRINGIDO">RESTRINGIDO</option>
+                <option value="REQUERIDO">REQUERIDO</option>
+            </select>                      
+        </div>
+        <div class="col-md-6 form-group">
+            <label >Formato del campo</label>
+            <select  [ngModelOptions]="{standalone: true}"
+            [(ngModel)]="Dinamico.formato" value="{{Dinamico.formato}}" class="form-control" (change)="asociarLista()">
+                <option value="0">SELECCIONE</option>
+                <option value="TEXTO">TEXTO</option>
+                <option value="FECHA">FECHA</option>
+                <option value="LOGICO">LOGICO</option>
+                <option value="ARCHIVO">ARCHIVO</option>
+                <option value="LISTA">LISTA</option>
+            </select>                      
+        </div>
+    </div>
+
+    <div class="row form-group" *ngIf="lstVisible">
+        <div class="col-md-12">
+            <label >Escribir función API-Core</label>
+            <input type="text"  [ngModelOptions]="{standalone: true}"
+            [(ngModel)]="Dinamico.funcion" value="{{Dinamico.funcion}}" class="form-control">
+        </div>
+    </div>
+
+   
+    <div class="row">
+        <div class="col-md-12 text-right">
+            <button type="button" class="btn bg-gradient-green text-white" (click)="aceptar()">Aceptar </button>
+            <button type="button" class="btn bg-gradient-red text-white">Cancelar e</button>
+        </div>
+    </div>
+    
+
+</form>
+
+

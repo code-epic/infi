@@ -60,6 +60,8 @@ import { InversionwComponent } from 'src/app/views/inversion/inversionw/inversio
 import { GeneracionDatosOpicsComponent } from 'src/app/views/utilitarios/generacion-datos-opics/generacion-datos-opics.component';
 import { ProgramadorTareasComponent } from 'src/app/views/utilitarios/programador-tareas/programador-tareas.component';
 import { SesionesComponent } from 'src/app/views/utilitarios/sesiones/sesiones.component';
+import { MegeneralesComponent } from 'src/app/views/me/reportes/megenerales/megenerales.component';
+import { EmpresaComponent } from 'src/app/views/configuracion/empresa/empresa.component';
 
 export const AdminLayoutRoutes: Routes = [
     { path: 'dashboard', component: DashboardComponent },
@@ -124,6 +126,8 @@ export const AdminLayoutRoutes: Routes = [
     { path:'inversionw', component:InversionwComponent},
     { path:'generacionOpics', component:GeneracionDatosOpicsComponent},
     { path:'programadorTarea', component:ProgramadorTareasComponent},
-    { path:'sesiones', component:SesionesComponent}
+    { path:'sesiones', component:SesionesComponent},
+    { path:'reportes', component: MegeneralesComponent},
+    { path:'empresa', component: EmpresaComponent},
     
 ];

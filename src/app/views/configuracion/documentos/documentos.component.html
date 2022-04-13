@@ -28,101 +28,56 @@
                             <div class="form-group col-md-4">
                                 <label for="">Unidad de inversion</label>
                                 <select name="" id="unidadInv" class="form-control">
-                                    <option value="">Unidad de inversion</option>
+                                    <option value="">SELECCION</option>
                                 </select>
                             </div>
                             <div class="form-group col-md-4">
                                 <label for="">Transaccion</label>
                                 <select name="" id="transaccion" class="form-control">
-                                    <option value="">Transaccion</option>
+                                    <option *ngFor="let trs of transacciones" value="{{ trs.TRANSA_ID }}">{{ trs.TRANSA_DESCRIPCION }}</option>
                                 </select>
                             </div>
                             <div class="form-group col-md-4">
                                 <label for="">Estatus</label>
                                 <select name="" id="estatus" class="form-control">
-                                    <option value="">Estatus</option>
-                                    <option value="P">APROBADO</option>
-                                    <option value="E">REGISTRADO</option>
+                                    <option value="">SELECCIONE</option>
+                                    <option value="A">APROBADO</option>
+                                    <option value="R">REGISTRADO</option>
                                 </select>
                             </div>
                         </div>
-                        <div class="form-row">
-
-                            <div class="form-group col-md-6">
-                                <label for="">Creado</label>
-                                <select name="" id="creado" class="form-control">
-                                    <option value="">Creado</option>
-                                    <option value="P">Angel</option>
-                                    <option value="E">Jesus</option>
-                                </select>
-                            </div>
-                            <div class="form-group col-md-6">
-                                <label for="">Aprobado</label>
-                                <select name="" id="aprobado" class="form-control">
-                                    <option value="">Aprobado</option>
-                                    <option value="P">Antonio</option>
-                                    <option value="E">Gustavo</option>
-                                </select>
-                            </div>
-                        </div>
+                    
 
                         <div class="form-row">
 
                                 <div class="col-xs-12 col-sm-6 col-md-5 col-lg-3">
-                                    <label for="">Fecha creacion</label>
-                                    <form class="form-inline">
-                                        <div class="form-group">
-                                            <div class="input-group">
-                                                <input class="form-control" placeholder="Desde" name="dp" [(ngModel)]="fechaDesde" ngbDatepicker #fd="ngbDatepicker" [placement]="placement" [positionTarget]="buttonEl">
-                                                <div class="input-group-append">
-                                                    <button #buttonEl class="btn calendario" (click)="fd.toggle()" type="button"></button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </form>
+                                    <label for="">Fecha de Creación</label> 
+                                    <mat-form-field appearance="fill">
+                                        <mat-label>Introduzca el rango</mat-label>
+                                        <mat-date-range-input [rangePicker]="picker">
+                                            <input matStartDate placeholder="Desde">
+                                            <input matEndDate placeholder="Hasta">
+                                        </mat-date-range-input>
+                                        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                                        <mat-date-range-picker #picker></mat-date-range-picker>
+                                    </mat-form-field>
                                 </div>
                          
-                                <div class="col-xs-12 col-sm-6 col-md-5 col-lg-3">
-                                    <div class="margenBoton"></div>
-                                    <form class="form-inline">
-                                        <div class="form-group">
-                                            <div class="input-group">
-                                                <input class="form-control" placeholder="Hasta" name="dp" [(ngModel)]="fechaDesde" ngbDatepicker #fd="ngbDatepicker" [placement]="placement" [positionTarget]="buttonEl">
-                                                <div class="input-group-append">
-                                                    <button #buttonEl class="btn calendario" (click)="fd.toggle()" type="button"></button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </form>
-                                </div>
-                                <div class="col-xs-12 col-sm-6 col-md-5 col-lg-3">  
-                                    <label for="">Fecha aprobado</label>                              
-                                    <form class="form-inline">
-                                        <div class="form-group">
-                                            <div class="input-group">
-                                                <input class="form-control" placeholder="Desde" name="dp" [(ngModel)]="fechaDesde" ngbDatepicker #fd="ngbDatepicker" [placement]="placement" [positionTarget]="buttonEl">
-                                                <div class="input-group-append">
-                                                    <button #buttonEl class="btn calendario" (click)="fd.toggle()" type="button"></button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </form>
+                               
+                                <div class="col-xs-12 col-sm-6 col-md-5 col-lg-4">  
+                                    <label for="">Fecha aprobado</label>      
+                                    <mat-form-field appearance="fill">
+                                        <mat-label>Introduzca el rango</mat-label>
+                                        <mat-date-range-input [rangePicker]="aprobado">
+                                            <input matStartDate placeholder="Desde">
+                                            <input matEndDate placeholder="Hasta">
+                                        </mat-date-range-input>
+                                        <mat-datepicker-toggle matSuffix [for]="aprobado"></mat-datepicker-toggle>
+                                        <mat-date-range-picker #aprobado></mat-date-range-picker>
+                                    </mat-form-field>
                                 </div>
                          
-                                <div class="col-xs-12 col-sm-6 col-md-5 col-lg-3">
-                                    <div class="margenBoton"></div>
-                                    <form class="form-inline">
-                                        <div class="form-group">
-                                            <div class="input-group">
-                                                <input class="form-control" placeholder="Hasta" name="dp" [(ngModel)]="fechaDesde" ngbDatepicker #fd="ngbDatepicker" [placement]="placement" [positionTarget]="buttonEl">
-                                                <div class="input-group-append">
-                                                    <button #buttonEl class="btn calendario" (click)="fd.toggle()" type="button"></button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </form>
-                                
-                                </div>
+                               
                         </div>
                         
                         <div class="form-row justify-content-md-center mb-2 top2">

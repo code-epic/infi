@@ -1,0 +1,208 @@
+<br><br>
+<h4 class="titulo">REGISTRAR BLOTTER</h4>
+<hr style="margin-top:1rem">
+<form >
+    <div class="row">
+        <div class="col-md-4 form-group">
+            <label for="">Descripción</label>
+            <input type="text" class="form-control">
+        </div>
+    
+        <div class="col-md-4 form-group">
+            <label for="">Restringido</label>
+            <select class="form-control" name="" id="">
+                <option value="">Seleccione</option>
+                <option value="S">Si</option>
+                <option value="N">No</option>
+            </select>
+        </div>
+        
+
+        <div class="col-md-4 form-group">
+            <label for="">Cartera Propia</label>
+            <select class="form-control" name="" id="">
+                <option value="">Seleccione</option>
+                <option value="S">Si</option>
+                <option value="N">No</option>
+            </select>
+        </div>
+    
+    </div>
+
+   
+
+    <div class="row">
+        <div class="col-md-3 form-group">
+            <label for="">Tipo Persona</label>
+            <select class="form-control" name="" id="">
+                <option value="">Seleccione</option>
+                <option value="S">VENEZOLANO</option>
+                
+            </select>
+        </div>
+    
+        <div class="col-md-3 form-group">
+            <label for="">Estatus</label>
+            <select class="form-control" name="" id="">
+                <option value="">Seleccione</option>
+                <option value="S">A</option>                    
+            </select>
+        </div>
+        
+
+        <div class="col-md-3 form-group">
+            <label for="">Red</label>
+            <select class="form-control" name="" id="">
+                <option value="">Seleccione</option>
+                <option value="S">Si</option>
+                <option value="N">No</option>
+            </select>
+        </div> 
+        
+        <div class="col-md-3 form-group">
+            <label for="">Canal</label>
+            <select class="form-control" name="" id="">
+                <option value="">Seleccione</option>
+                <option value="S">Infi</option>
+                
+            </select>
+        </div>  
+    </div>
+
+ 
+    <br>
+    <div class="row">
+        <div class="col-md-6 top1">
+            <h4 class="titulo">HORARIO</h4>
+            <hr style="margin-top:1rem">
+           
+            <div class="form-group col-md-12">
+                <label for="tmsCreacion">Fecha Desde</label>
+                <form class="form-inline">
+                    <div class="form-group" style="width:100%">
+                        <div class="input-group" style="width:100%">
+                            <input class="form-control" placeholder="AAAA-MM-DD" 
+                            [ngModelOptions]="{standalone: true}"
+                            [value]="formatter.format(fdesdeDate)"
+                            [(ngModel)]="fdesde" ngbDatepicker #fc="ngbDatepicker" 
+                            [placement]="placement" [positionTarget]="buttonEl">
+                            <div class="input-group-append">
+                                <button #buttonEl class="btn calendario" (click)="fc.toggle()" type="button"></button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="col-md-12 justify-content-md-center tex-center  form-group">
+                <label for="">Hora Desde</label>
+                <ngb-timepicker [(ngModel)]="hdesde" [meridian]="meridian"></ngb-timepicker>                
+            </div>
+        
+            <div class="col-md-12 justify-content-md-center tex-center  form-group">
+                <label for="">Hora Hasta</label>
+                <ngb-timepicker [(ngModel)]="hhasta" [meridian]="meridian"></ngb-timepicker>                
+            </div> 
+            
+        </div>
+        <div class="col-md-6 top1">
+            <h4 class="titulo">HORARIO VALIDO PARA EL ULTIMO DIA</h4>
+            <hr style="margin-top:1rem">
+            <div class="form-group col-md-12">
+                <label for="tmsOrigen">Fecha Hasta</label>
+                <form class="form-inline">
+                    <div class="form-group" style="width:100%">
+                        <div class="input-group" style="width:100%">
+                            <input class="form-control" placeholder="AAAA-MM-DD" 
+                            [ngModelOptions]="{standalone: true}"
+                            [(ngModel)]="fhasta" ngbDatepicker #fo="ngbDatepicker" 
+                            [value]="formatter.format(fhastaDate)"
+                            [placement]="placement" [positionTarget]="buttonEl">
+                            <div class="input-group-append">
+                                <button #buttonEl 
+                                    class="btn calendario" (click)="fo.toggle()" 
+                                    type="button">
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="col-md-12 justify-content-md-center tex-center form-group">
+                <label for="">Hora Desde</label>
+                <ngb-timepicker [(ngModel)]="hvdesde" [meridian]="meridian"></ngb-timepicker>                
+            </div>
+        
+            <div class="col-md-12 justify-content-md-center tex-center  form-group">
+                <label for="">Hora Hasta</label>
+                <ngb-timepicker [(ngModel)]="hvhasta" [meridian]="meridian"></ngb-timepicker>                
+            </div> 
+        
+    </div>
+    </div>
+
+    <h4 class="titulo">PARAMETROS</h4>
+    <hr style="margin-top:1rem"> 
+
+    <div class="row">
+        <div class="col-md-4 form-group">
+            <label for="">Tipo de Persona</label>
+            <select class="form-control">
+                <option value="V">VENEZOLANO</option>
+                <option value="J">JURIDICO</option>
+                <option value="G">GUBERNAMENTAL</option>
+            </select>
+        </div>
+        <div class="col-md-4 form-group">
+            <label for="">Tipo de Transición</label>
+            <select class="form-control">
+                <option value="">SELECCIONE</option>
+                <option value="S">Si</option>
+                <option value="N">No</option>
+            </select>
+        </div>
+        <div class="col-md-4 form-group">
+            <label for="">Tipo de Operación</label>
+            <select class="form-control">
+                <option value="">SELECCIONE</option>
+                <option value="S">Si</option>
+                <option value="N">No</option>
+            </select>
+        </div>
+        
+    </div>
+
+    <div class="row">
+        <div class="col-md-4 form-group">
+            <label for="">Precio</label>
+            <input type="number" class="form-control">
+        </div>
+        <div class="col-md-4 form-group">
+            <label for="">Monto mínimo de Compra</label>
+            <input type="number" class="form-control">
+        </div>
+        <div class="col-md-4 form-group">
+            <label for="">Monto máximo de Compra</label>
+            <input type="number" class="form-control">
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-4 form-group">
+            <label for="">Comision del Emisor</label>
+            <input type="number" class="form-control">
+        </div>
+        <div class="col-md-4 form-group">
+            <label for="">Porcentaje máximo de financiamiento</label>
+            <input type="number" class="form-control">
+        </div>
+        <div class="col-md-4 form-group">
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="col-md-12 text-right">
+            <button class="btn bg-gradient-green text-white" >Aceptar </button>
+            <button  class="btn bg-gradient-red text-white" >Cancelar </button>
+        </div>
+    </div>
+</form >

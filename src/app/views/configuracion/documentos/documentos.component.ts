@@ -1,11 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { NgbModalConfig, NgbModal,NgbDateStruct } from '@ng-bootstrap/ng-bootstrap';
+import { ApiService, IAPICore } from 'src/app/services/apicore/api.service';
+import { FormGroup, FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-documentos',
   templateUrl: './documentos.component.html',
   styleUrls: ['./documentos.component.scss']
 })
+
 export class DocumentosComponent implements OnInit {
 
   title = 'Documentos';
@@ -13,8 +16,20 @@ export class DocumentosComponent implements OnInit {
   fechaHasta : NgbDateStruct;
   placement = 'bottom';
 
+  transacciones = []
 
-  constructor(config: NgbModalConfig, private modalService: NgbModal) {
+  range = new FormGroup({
+    start: new FormControl(),
+    end: new FormControl(),
+  });
+
+  public xApi : IAPICore = {
+    funcion : '',
+    parametros: ''
+  }
+  constructor(config: NgbModalConfig, 
+    private modalService: NgbModal,
+    private apiService : ApiService) {
     // customize default values of modals used by this component tree
     config.backdrop = 'static';
     config.keyboard = false;
@@ -22,6 +37,15 @@ export class DocumentosComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.xApi.funcion = 'C_Transacciones'
+    this.apiService.Ejecutar(this.xApi).subscribe(
+      (data) => {
+        this.transacciones = data.Cuerpo
+      },
+      (error) => {
+        console.info('No existen transacciones registradas')
+      }
+    )
   }
 
   open(content) {

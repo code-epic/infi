@@ -70,6 +70,8 @@ import { GeneracionDatosOpicsComponent } from './views/utilitarios/generacion-da
 import { ProgramadorTareasComponent } from './views/utilitarios/programador-tareas/programador-tareas.component';
 import { SesionesComponent } from './views/utilitarios/sesiones/sesiones.component';
 import { TabsModule } from 'ngx-bootstrap/tabs';
+
+import { MatCommonModule, MatNativeDateModule } from '@angular/material/core';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
@@ -77,7 +79,15 @@ import { MatExpansionModule } from '@angular/material/expansion';
 import { MatCheckboxModule } from '@angular/material/checkbox'
 import { MatListModule } from '@angular/material/list'
 import { MatPaginatorModule } from '@angular/material/paginator';
-
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MegeneralesComponent } from './views/me/reportes/megenerales/megenerales.component';
+import { EmpresaComponent } from './views/configuracion/empresa/empresa.component';
+import { EmpregistrarComponent } from './views/configuracion/empresa/empregistrar/empregistrar.component';
+import { VehiculoComponent } from './views/configuracion/empresa/vehiculo/vehiculo.component';
+import { CmpregistrarComponent } from './views/configuracion/campos-dinamicos/cmpregistrar/cmpregistrar.component';
+import { BltregistrarComponent } from './views/configuracion/blotters/bltregistrar/bltregistrar.component';
 
 
 const ngWizardConfig: NgWizardConfig = {
@@ -94,6 +104,9 @@ const ngWizardConfig: NgWizardConfig = {
     RouterModule,
     AppRoutingModule,
     TabsModule.forRoot(),
+    MatNativeDateModule,
+    MatInputModule,
+    MatCommonModule,
     MatTabsModule,
     MatButtonModule,
     MatIconModule,
@@ -101,6 +114,8 @@ const ngWizardConfig: NgWizardConfig = {
     MatExpansionModule,
     MatListModule,
     MatPaginatorModule,
+    MatDatepickerModule,
+    MatFormFieldModule,
     NgWizardModule.forRoot(ngWizardConfig)
 
   ],
@@ -167,8 +182,15 @@ const ngWizardConfig: NgWizardConfig = {
     GeneracionDatosOpicsComponent,
     ProgramadorTareasComponent,
     SesionesComponent,
+    MegeneralesComponent,
+    EmpresaComponent,
+    EmpregistrarComponent,
+    VehiculoComponent,
+    CmpregistrarComponent,
+    BltregistrarComponent,
   ],
-  providers: [],
+  providers: [
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

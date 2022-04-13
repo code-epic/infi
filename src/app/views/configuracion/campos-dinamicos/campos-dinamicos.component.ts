@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NgbModalConfig, NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { ApiService, IAPICore } from 'src/app/services/apicore/api.service';
 
 @Component({
   selector: 'app-campos-dinamicos',
@@ -8,28 +9,55 @@ import { NgbModalConfig, NgbModal } from '@ng-bootstrap/ng-bootstrap';
 })
 export class CamposDinamicosComponent implements OnInit {
 
-  constructor(config: NgbModalConfig, private modalService: NgbModal) {
-    // customize default values of modals used by this component tree
+  public registrar : boolean = false
+
+  public buscar : string = ''
+  public xAPI : IAPICore = {
+    funcion : '',
+    valores : '',
+    parametros : ''
+  }
+  public lstCampos = []
+
+  constructor(config: NgbModalConfig, private modalService: NgbModal,
+    private apiService : ApiService) {
+    // customize default values of modals used by this component treee
     config.backdrop = 'static';
     config.keyboard = false;
     
   }
 
+
   ngOnInit(): void {
   }
+
+
 
   open(content) {
     this.modalService.open(content);
     
   }
 
-  modficar(content){
-    const modalRef = this.modalService.open(content, { size: 'lg', backdrop: 'static' });
+  frm(){
+    this.registrar = !this.registrar
   }
 
-  add(content) {
-    this.modalService.open(content,{ size: 'lg', backdrop: 'static' });
-    
+   consultar(){
+    this.xAPI.funcion = 'WKF_CCamposDinamicos'
+    this.xAPI.parametros =  this.buscar
+    this.xAPI.valores = ''
+
+    this.apiService.Ejecutar(this.xAPI).subscribe(
+      data => {
+        console.info(data)
+        this.lstCampos = data.Cuerpo
+      }, 
+      error => {
+        console.error('GDoc.CCamposDinamicos: ', error)
+      }
+    )
   }
+
+
 
 }

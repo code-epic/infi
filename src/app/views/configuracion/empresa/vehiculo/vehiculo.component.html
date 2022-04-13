@@ -1,0 +1,80 @@
+<h4 class="titulo">REGISTRAR VEHICULO</h4>
+<hr style="margin-top:1rem">
+
+<form >
+    <div class="form-row">
+        <div class="form-group col-md-2">
+        <label for="inputEmail4">Tipo Persona</label>                    
+        <select 
+        [ngModelOptions]="{standalone: true}"
+        [(ngModel)]="tipoPersona" value="{{tipoPersona}}" class="form-control">
+            <option value="J">JURIDICO</option>
+            <option value="G">GUBERNAMENTAL</option>
+        </select>
+        </div>
+        <div class="form-group col-md-2">
+            <label for="nombre">RIF</label>
+            <input type="text" class="form-control" 
+            [ngModelOptions]="{standalone: true}"
+            [(ngModel)]="Vehiculo.rif" value="{{Vehiculo.rif}}"
+            placeholder="RIF">
+        </div>
+        <div class="form-group col-md-6">
+            <label for="nombre">Vehiculo</label>
+            <input type="text" 
+            [ngModelOptions]="{standalone: true}"
+            [(ngModel)]="Vehiculo.nombre" value="{{Vehiculo.nombre}}"
+            class="form-control" placeholder="Vehiculo">
+        </div>
+        <div class="form-group col-md-2">
+            <label for="nombre">Branch</label>
+            <input type="text" class="form-control" 
+            [ngModelOptions]="{standalone: true}"
+            [(ngModel)]="Vehiculo.branch" value="{{Vehiculo.branch}}"
+            placeholder="Branch">
+        </div>
+    </div>
+
+    <div class="form-row">
+        <div class="form-group col-md-2">                   
+            <label >Siglas de Vehiculo</label>
+            <input type="text" 
+            [ngModelOptions]="{standalone: true}"
+            [(ngModel)]="Vehiculo.siglas" value="{{Vehiculo.siglas}}"
+             class="form-control" >                    
+        </div>
+        <div class="form-group col-md-5">                       
+            <label for="codigoPostal">Cuenta Bancaria</label>
+            <select 
+            [ngModelOptions]="{standalone: true}"
+            [(ngModel)]="Vehiculo.cuenta" value="{{Vehiculo.cuenta}}"
+            id="tipoPersona" class="form-control">
+                <option value="0">-----------------</option>
+            </select>                       
+        </div>
+        <div class="form-group col-md-5">
+            <label for="codigoPostal">Cuenta CBV</label>
+            <input type="text" 
+            [ngModelOptions]="{standalone: true}"
+            [(ngModel)]="Vehiculo.cuentabcv" value="{{Vehiculo.cuentabcv}}"
+             class="form-control" >       
+        </div>
+    </div>
+
+
+
+   
+
+    
+
+    <div class="form-row">
+        <div class="form-group col-md-9"></div>
+        <div class="form-group col-md-3 text-right ">
+            <button type="button" class="btn bg-gradient-green text-white" (click)="aceptar()"> 
+            <i class="fa fa-search" aria-hidden="true"></i>&nbsp;&nbsp;Aceptar </button> 
+        </div>
+    </div>
+    
+
+
+</form>

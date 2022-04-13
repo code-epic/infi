@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NgbModalConfig, NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { ApiService, IAPICore } from 'src/app/services/apicore/api.service';
 
 @Component({
   selector: 'app-blotters',
@@ -8,17 +9,29 @@ import { NgbModalConfig, NgbModal } from '@ng-bootstrap/ng-bootstrap';
 })
 export class BlottersComponent implements OnInit {
 
-  time = {hour: 13, minute: 30};
-  meridian = true;
+  
+  buscar = ''
+  public registrar : boolean = true
+  lstLista = []
 
-  constructor(config: NgbModalConfig, private modalService: NgbModal) {
-    // customize default values of modals used by this component tree
+  public xAPI : IAPICore = {
+    funcion: '',
+    parametros: '',
+    valores : ''
+  };
+
+  constructor(
+    config: NgbModalConfig, 
+    private modalService: NgbModal, 
+    private apiService: ApiService) {
+   
     config.backdrop = 'static';
     config.keyboard = false;
     
   }
 
   ngOnInit(): void {
+    this.consultar()
   }
 
   open(content) {
@@ -30,8 +43,28 @@ export class BlottersComponent implements OnInit {
     const modalRef = this.modalService.open(content, { size: 'xl', backdrop: 'static' });
   }
 
-  toggleMeridian() {
-    this.meridian = !this.meridian;
-}
+  frm(){
+    this.registrar = !this.registrar
+  } 
+
+  consultar(){
+    this.registrar = true
+    this.xAPI.parametros = ''
+    this.xAPI.valores = ''
+    this.xAPI.funcion = 'INFI_CBloter'
+    this.apiService.Ejecutar(this.xAPI).subscribe(
+      (data) => {
+        console.info(data)
+        this.lstLista = data.Cuerpo
+      },
+      (error) => { 
+        console.error(error) 
+      }
+    )
+  }
+
+
+
+
 
 }

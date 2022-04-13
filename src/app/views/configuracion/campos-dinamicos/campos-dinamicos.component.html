@@ -12,98 +12,89 @@
                     <div class="row align-items-center">
                         <div class="col">
                             <h6 class="text-uppercase text-muted ls-1 mb-1">Campos dinamicos</h6>
-                            <h2 class="mb-0">Informacion</h2>
+                            <h2 class="mb-0">Información General</h2>
                         </div>
                     </div>
                 </div>
                 <div class="card-body">
-
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div>
-                                <button type="submit" class="btn bg-gradient-red text-white" (click)="add(agregar)">+ Agregar campo +<i aria-hidden="true"></i></button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row top">
-                        <div class="col-md-12 text-center">
-                            <div class="table-responsive">
-                                <div class="table-responsive-sm table-bordered">
-                                    <table class="table">
-                                        <thead>
-                                            <tr>
-                                                <th scope="col">Nombre</th>
-                                                <th scope="col">Descripcion</th>
-                                                <th scope="col">Tipo</th>
-                                                <th scope="col">Acción</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td>Caja de ahorros</td>
-                                                <td>Caja de ahorros</td>
-                                                <td>General</td>
-                                                <td>
-                                                    <i class="fas fa-edit iconEdit" (click)="modficar(content)"></i>
-                                                    <i class="far fa-trash-alt iconElimi" (click)="open(eliminar)"></i>
-                                                </td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
+                    <div class="container">
+                        <div class="row">
+            
+                            <div class="col-md-12">
+                            
+                            
+                                <div class="row justify-content-md-center mb-4">
+                                    <div class="col-md-1">                   
+                                      
+                                    </div>
+                                    <div class="col-md-6">
+                                        <input type="text"  [(ngModel)]="buscar" class="form-control" id="nombre" placeholder="Buscar ...">
+                                    </div>
+                                    <div class="col-md-4">    
+                                        <button type="button" class="btn bg-gradient-blue text-white" (click)="consultar()"> 
+                                            <i class="fa fa-search" aria-hidden="true"></i>&nbsp;&nbsp;Buscar </button>                         
+                                        <button type="button" class="btn bg-gradient-red text-white" (click)="frm()"> 
+                                            <i class="fa fa-plus" aria-hidden="true"></i>&nbsp;&nbsp;Agrergar </button>
+                                    </div>
+                                    <div class="col-md-1">                   
+                                      
+                                    </div>
                                 </div>
+                    
                             </div>
-    
+                        </div> 
+                    </div>
+                    <div class="container" *ngIf="!registrar">
+                        <div class="row">
+                            <div class="col-md-12 text-center">
+                                <div class="table-responsive">
+                                    <div class="table-responsive-sm table-bordered">
+                                        <table class="table">
+                                            <thead>
+                                                <tr>
+                                                    <th scope="col">Nombre</th>
+                                                    <th scope="col">Descripcion</th>
+                                                    <th scope="col">Tipo</th>
+                                                    <th scope="col">Acción</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr *ngFor="let c of lstCampos">
+                                                    <td>{{c.nomb}}</td>
+                                                    <td>{{c.obse}}</td>
+                                                    <td>{{c.form}}</td>
+                                                    <td>
+                                                        <i class="fas fa-edit iconEdit" (click)="frm()"></i>
+                                                        <i class="far fa-trash-alt iconElimi" (click)="open(eliminar)"></i>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+        
+                            </div>
                         </div>
                     </div>
+                    <div class="container" *ngIf="registrar">
+                        <app-cmpregistrar></app-cmpregistrar>
+                    </div>
+
                 </div>
                
 
             </div>
         </div>
     </div>
+
+    
+
 </div>
 
 
+ 
 
-<ng-template #content let-c="close" let-d="dismiss">
-    <div class="modal-header bg-gradient-red">
-        <h4 class="modal-title tituloModal" id="modal-basic-title">Editar Registro</h4>
-        <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
-        <span aria-hidden="true">&times;</span>
-      </button>
-    </div>
-    <div class="modal-body">
 
-        <div class="row">
-            <div class="col-md-4">
-                <label for="">Nombre</label>
-                <input type="text" class="form-control">
-            </div>
-            <div class="col-md-4">
-                <label for="">Descripcion</label>
-                <input type="text" class="form-control">
-            </div>
-            <div class="col-md-4">
-                <label for="">Tipo</label>
-                <input type="text" class="form-control">
-            </div>
-        </div>
-
-        <div class="row top5">
-            <div class="col-md-12">
-                <div class="text-center">
-                    <p> <span class="textRojo"><strong>NOTA:</strong></span> El Campo Deben Ser Llenados Para Poder Procesar El Formulario.</p>
-                </div>
-
-            </div>
-        </div>
-
-    </div>
-    <div class="modal-footer">
-        <button type="button" class="btn bg-gradient-red text-white" (click)="c('Save click')">Modificar </button>
-        <button type="button" class="btn bg-gradient-red text-white" (click)="d('Cross click')">Cancelar </button>
-    </div>
-</ng-template>
 
 
 <ng-template #eliminar let-c="close" let-d="dismiss">
@@ -122,43 +113,3 @@
     </div>
 </ng-template>
 
-
-<ng-template #agregar let-c="close" let-d="dismiss">
-    <div class="modal-header bg-gradient-red">
-        <h4 class="modal-title tituloModal" id="modal-basic-title">Agregar accion</h4>
-        <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
-        <span aria-hidden="true">&times;</span>
-      </button>
-    </div>
-    <div class="modal-body">
-
-
-        <div class="row">
-            <div class="col-md-4">
-                <label for="">Nombre</label>
-                <input type="text" class="form-control">
-            </div>
-            <div class="col-md-4">
-                <label for="">Descripciono</label>
-                <input type="text" class="form-control">
-            </div>
-            <div class="col-md-4">
-                <label for="">Tipo</label>
-                <input type="text" class="form-control">
-            </div>
-        </div>
-        <div class="row top5">
-            <div class="col-md-12">
-                <div class="text-center">
-                    <p> <span class="textRojo"><strong>NOTA:</strong></span> El Campo Deben Ser Llenados Para Poder Procesar El Formulario.</p>
-                </div>
-
-            </div>
-        </div>
-
-    </div>
-    <div class="modal-footer">
-        <button type="button" class="btn bg-gradient-red text-white" (click)="c('Save click')">Agregar </button>
-        <button type="button" class="btn bg-gradient-red text-white" (click)="d('Cross click')">Cancelar </button>
-    </div>
-</ng-template>

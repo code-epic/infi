@@ -1,0 +1,97 @@
+<h4 class="titulo">REGISTRAR EMPRESA</h4>
+<hr style="margin-top:1rem">
+<form >
+    <div class="form-row">
+        <div class="form-group col-md-2">
+        <label for="inputEmail4">Tipo Persona</label>                    
+        <select name="" id="tipoPersona"
+        [ngModelOptions]="{standalone: true}"
+        [(ngModel)]="tipoPersona" value="{{tipoPersona}}" class="form-control">
+            <option value="J">JURIDICO</option>
+            <option value="G">GUBERNAMENTAL</option>
+        </select>
+        </div>
+        <div class="form-group col-md-3">
+        <label for="nombre">RIF</label>
+        <input type="text" class="form-control" 
+        [ngModelOptions]="{standalone: true}"
+        [(ngModel)]="Empresa.rif" value="{{Empresa.rif}}"
+        id="nombre" placeholder="RIF">
+        </div>
+        <div class="form-group col-md-7">
+        <label for="nombre">Nombre o Razón Social</label>
+        <input type="text" 
+        [ngModelOptions]="{standalone: true}"
+        [(ngModel)]="Empresa.nombre" value="{{Empresa.nombre}}"
+        class="form-control" id="nombre" placeholder="Razón Social">
+        </div>
+    </div>
+
+    <div class="form-row">
+        <div class="form-group col-md-2">                   
+            <label for="numTelefono">Siglas</label>
+            <input type="text" 
+            [ngModelOptions]="{standalone: true}"
+            [(ngModel)]="Empresa.siglas" value="{{Empresa.siglas}}"
+            id="numTelefono" class="form-control" >                    
+        </div>
+        <div class="form-group col-md-10">                       
+            <label for="codigoPostal">Cuenta Bancaria</label>
+            <select 
+            [ngModelOptions]="{standalone: true}"
+            [(ngModel)]="Empresa.cuenta" value="{{Empresa.cuenta}}"
+            id="tipoPersona" class="form-control">
+                <option value="0">-----------------</option>
+            </select>                       
+        </div>
+    </div>
+
+
+
+    <div class="form-row">
+        <div class="form-group col-md-4">
+            <label>Emisor</label>                    
+            <select 
+                [ngModelOptions]="{standalone: true}"
+                [(ngModel)]="Empresa.emisor" value="{{Empresa.emisor}}"
+                id="tipoPersona" class="form-control">
+                <option value=0>NO</option>
+                <option value=1>SI</option>
+            </select>
+        </div>
+        <div class="form-group col-md-4">
+            <label>Depositario </label>                    
+            <select 
+                [ngModelOptions]="{standalone: true}"
+                [(ngModel)]="Empresa.depositario" value="{{Empresa.depositario}}"
+                id="tipoPersona" class="form-control">
+                <option value=0>NO</option>
+                <option value=1>SI</option>
+            </select>
+        </div>
+        <div class="form-group col-md-4">
+            <label>Estatus</label>                    
+            <select 
+                [ngModelOptions]="{standalone: true}"
+                [(ngModel)]="Empresa.estatus" value="{{Empresa.estatus}}"
+                id="tipoPersona" class="form-control">
+                <option value=0>NO</option>
+                <option value=1>SI</option>
+            </select>
+        </div>
+    </div>
+
+    
+
+    <div class="form-row">
+        <div class="form-group col-md-9"></div>
+        <div class="form-group col-md-3 text-right ">
+            <button type="button" class="btn bg-gradient-green text-white" (click)="aceptar()"> 
+            <i class="fa fa-search" aria-hidden="true"></i>&nbsp;&nbsp;Aceptar </button> 
+        </div>
+    </div>
+    
+
+
+</form>
+
